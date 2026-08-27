@@ -2071,10 +2071,29 @@ from outline.schemas import AnnotateOut, ChaptersOut, CourseRequest, PartsOut, T
 from outline.validate.invariants import check
 
 GUIDANCE = {
-    "SKILLS_BASED_PROGRESSION": "Progression style: SKILLS-BASED. Group by shared skill into coherent skill domains; order simple/foundational skills before complex ones.",
-    "THEME_BASED_PROGRESSION": "Progression style: THEME-BASED. Group by theme or big idea; order units as a narrative of ideas.",
-    "CHRONOLOGICAL_PROGRESSION": "Progression style: CHRONOLOGICAL. Group and order units by historical/temporal sequence implied by the objectives.",
-    "STANDARDS_DRIVEN_PROGRESSION": "Progression style: STANDARDS-DRIVEN. Keep the given item order (framework order); units are contiguous runs of items.",
+    "SKILLS_BASED_PROGRESSION": (
+        "Progression style: SKILLS-BASED. A unit is a coherent skill domain; a chapter is a focused group of objectives "
+        "sharing one primary skill. Order Foundational before Intermediate before Advanced, then by prerequisite "
+        "dependency. Same skill normally means same chapter; split only when the instructional arc materially changes."
+    ),
+    "THEME_BASED_PROGRESSION": (
+        "Progression style: THEME-BASED. A unit is one overarching theme or big idea; a chapter is a focused group of "
+        "objectives exploring one aspect of that theme. A theme is a conceptual grouping, NOT a skill: different skills "
+        "may share a theme. Order themes from foundational/context-setting to complex themes that build on them."
+    ),
+    "CHRONOLOGICAL_PROGRESSION": (
+        "Progression style: CHRONOLOGICAL. Organise by the most authentic chronological progression in the discipline: "
+        "historical periods, scientific process sequence, developmental stages, or natural topic sequence "
+        "(e.g. Cells -> Cell Processes -> Genetics -> Evolution; Ancient -> Classical -> Middle Ages -> Modern). "
+        "A unit is one period/phase/stage; a chapter is a coherent milestone within it. Prerequisites always come first."
+    ),
+    "STANDARDS_DRIVEN_PROGRESSION": (
+        "Progression style: STANDARDS-DRIVEN. The given item order IS the standards-framework order and is FIXED. "
+        "Do not reorder items by skill, tier, or your own knowledge of any framework. Walk the list from first to last "
+        "and group only ADJACENT (consecutive) items: a unit is one standard domain (a contiguous run), a chapter is one "
+        "cluster within it. If the same cluster reappears later, it is a separate chapter with a distinct name. "
+        "order_rank must follow input position."
+    ),
 }
 
 
@@ -2089,6 +2108,7 @@ def course_header(course: dict, budget: dict, part_names=(), this_part: str | No
         f"CALENDAR: {course['lessons_per_week']} lessons/week x {course['course_duration_weeks']} weeks = "
         f"{budget['total_lesson_days']} lesson days; {course['minutes_per_lesson']} min/lesson; chapter word limit {budget['word_limit']}",
     ]
+    lines.append("PROGRESSION: " + GUIDANCE[course["progression"]])
     if part_names:
         lines.append("UNITS: " + " · ".join(f"{i + 1}. {n}" for i, n in enumerate(part_names)))
     if this_part:
