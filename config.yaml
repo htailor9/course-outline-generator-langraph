@@ -1,0 +1,10 @@
+provider: anthropic            # anthropic | openai | bedrock_converse
+models:
+  default: claude-sonnet-4-5
+  annotate: claude-haiku-4-5
+  titles: claude-haiku-4-5
+batch_size: 30
+max_concurrency: 5
+skill_mode_threshold: 300
+llm_timeout_seconds: 90
+transport_retries: 3

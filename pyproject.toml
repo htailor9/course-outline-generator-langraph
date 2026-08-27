@@ -1,0 +1,27 @@
+[project]
+name = "outline"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "langgraph>=0.2.60",
+  "langchain>=0.3.20",
+  "langchain-core>=0.3.40",
+  "langchain-anthropic>=0.3.5",
+  "langchain-openai>=0.3.5",
+  "langchain-aws>=0.2.10",
+  "pydantic>=2.7",
+  "pyyaml>=6",
+  "tenacity>=8.2",
+]
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "hypothesis>=6.100"]
+
+[tool.setuptools]
+packages = ["outline", "outline.rules", "outline.assemble", "outline.validate"]
+[tool.setuptools.package-data]
+outline = ["prompts/*.md"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+markers = ["live: needs real provider credentials"]
