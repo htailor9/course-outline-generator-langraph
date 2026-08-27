@@ -1,0 +1,75 @@
+Berlin Langraph flow:-
+
+Model:- GPT-5.2, Max token configured:- 100000
+
+- start -> LO analyser node (agent type - classifier) -> Planner node (agent type - routerSubAgent) (skill-based/theme-based/standards-driven/chronological) -> Tool node (pack and merge REST API call) -> DCIM node (agent type - synthesizer)
+
+
+- Planner input parameter:- annotated_objectives 
+
+- Tool node input parameter:- 
+grouping_plan
+annotated_objectives
+PearsonExtSSOSession
+
+Header:- 
+Content-Type: application/json
+PearsonExtSSOSession: {{ PearsonExtSSOSession }}
+
+Payload:- 
+{
+  "grouping_plan": "{{ grouping_plan }}",
+  "annotated_objectives": "{{ annotated_objectives }}"
+}
+
+- DCIM node input parameter:-
+annotated_objectives
+grouping_plan
+
+
+
+
+
+
+
+
+Tool-call graph
+
+Analyzer - 3943 tokens 15774 characters 4209 words
+Planner [Skill] - 2137 tokens 8550 characters 1130 words
+DCIM - 9912 tokens 39649 characters 8341 words
+
+
+94 lg token:- 4982 tokens 19929 characters 5168 words
+
+after updated prompts:-
+
+Analyzer - 2504 tokens 10019 characters 1331 words
+Planner [Skill] - 2244 tokens 8978 characters 1197 words
+DCIM - 3849 tokens 15398 characters 2226 words
+
+94 lg token:- 4982 tokens 19929 characters 5168 words
+
+
+
+Current deployed graph
+
+Analyzer - 2015 tokens 8062 characters 3072 words
+Planner [Skill] - 3468 tokens 13874 characters 3973 words
+DCIM - 9350 tokens 37401 characters 12331 words
+
+94 lg token:- 4946 tokens 19787 characters 5163 words
+
+
+
+GPT-5.2 features a total context window of 400,000 tokens and a maximum output token limit of 128,000 tokens.Token SpecificationsContext Window: GPT-5.2 Model | OpenAI API supports a total context window of 400,000 tokens for handling text and images.Maximum Input Limit: While the overall context is 400k, practical API implementations typically restrict 
+
+max prompt input tokens to 272,000 tokens
+to leave room for the 128k output buffer.Maximum Output Limit:
+The model supports up to 128,000 output tokens in a single response, which includes any generated reasoning tokens
+
+
+26/8  Tool-call graph
+Issues to fix
+Before calling the Python tool, the Planner should check:
+

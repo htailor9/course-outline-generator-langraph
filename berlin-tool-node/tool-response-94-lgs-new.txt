@@ -1,0 +1,37 @@
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"LLM started - LearningObjectiveAnalyser"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"LLM ended - LearningObjectiveAnalyser"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"LLM started - SkillsBasedCurriculumProgressionPlanner"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"LLM ended - SkillsBasedCurriculumProgressionPlanner"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"Tool started - CourseOutlinePackAndMerge"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"Tool ended - CourseOutlinePackAndMerge"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"LLM started - SkillsBasedCurriculumProgressionPlanner"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"LLM ended - SkillsBasedCurriculumProgressionPlanner"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"LLM started - DCIMCourseOutlineGenerator"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"start"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"\n{\n  \"status\": \"generation_failed\",\n  \"error_source\": \"CourseOutlinePackAndMerge\",\n  \"error_detail\": \"Failure detected: required authoritative fields indicate num_content_parts=11, content_chapter_count=72, total_chapter_count=121, but the forwarded \\\"parts\\\" array contains only 2 parts and only 9 content chapters. This is an upstream packing/forwarding mismatch; cannot generate a locked-order outline without the complete parts structure.\",\n  \"error_type\": \"unknown\",\n  \"http_status\": null,\n  \"raw_response_excerpt\": null,\n  \"retry_eligible\": true\n}\n","type":"chunk","contentType":"JSON"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"streaming","content":"LLM ended - DCIMCourseOutlineGenerator"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"keepAlive"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"keepAlive"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"keepAlive"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"keepAlive"}
+
+data: {"requestId":"6336ed33-65d4-4670-9e55-c20b672e0178","responseId":"321d328b-c0ca-40c3-8a8e-eab902e1f869","streamStatus":"done"}
+
+event: end
+data:
+
