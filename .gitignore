@@ -6,3 +6,6 @@ out/
 .pytest_cache/
 .hypothesis/
 *.egg-info/
+berlin-tool-node/llmlogs-*.json
+*.png
+Chat_gpt_plane.md
