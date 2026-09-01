@@ -13,7 +13,11 @@ def _split(s: str) -> list[str]:
 
 VERB_TIER: dict[str, str] = {}
 # Insert highest tier first so that lower tiers overwrite → lowest tier wins.
-for _tier, _verbs in (("Advanced", _ADVANCED), ("Intermediate", _INTERMEDIATE), ("Foundational", _FOUNDATIONAL)):
+for _tier, _verbs in (
+    ("Advanced", _ADVANCED),
+    ("Intermediate", _INTERMEDIATE),
+    ("Foundational", _FOUNDATIONAL),
+):
     for _v in _split(_verbs):
         VERB_TIER[_v] = _tier
 

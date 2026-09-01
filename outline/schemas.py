@@ -1,4 +1,5 @@
 """All Pydantic contracts: input request, LLM structured outputs, DCIM output."""
+
 from __future__ import annotations
 
 from typing import Literal
@@ -11,7 +12,6 @@ Progression = Literal[
     "CHRONOLOGICAL_PROGRESSION",
     "STANDARDS_DRIVEN_PROGRESSION",
 ]
-Tier = Literal["Foundational", "Intermediate", "Advanced"]
 
 
 # ---------- input ----------

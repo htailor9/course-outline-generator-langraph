@@ -1,0 +1,10 @@
+MERGE: Part 'Counting And Combinatorics' (3 chapters) merged with 'Number Systems And Information Theory' (4 chapters)
+RESULT: Part 'Counting Combinatorics & Number Systems' now has 7 chapters
+MERGE: Part 'Sequences And Recursive Processes' (3 chapters) merged with 'Graph Theory And Networks' (3 chapters)
+RESULT: Part 'Sequences Recursive & Graph Theory' now has 6 chapters
+MERGE: Part 'Fair Division Methods' (3 chapters) merged with 'Voting Theory And Social Choice' (5 chapters)
+RESULT: Part 'Voting Theory & Fair Division' now has 8 chapters
+FINAL: Part 'Logical Reasoning And Argumentation' - 4 understand chapters OK
+FINAL: Part 'Counting Combinatorics & Number Systems' - 7 understand chapters OK
+FINAL: Part 'Sequences Recursive & Graph Theory' - 6 understand chapters OK
+FINAL: Part 'Voting Theory & Fair Division' - 8 understand chapters OK

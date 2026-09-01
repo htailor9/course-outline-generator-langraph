@@ -1,13 +1,52 @@
 """Deterministic naming helpers (ported from course_outline_structure_service.py)."""
+
 import re
 from collections import OrderedDict
 
 MAX_PART_NAME_WORDS = 6
 STOP_WORDS = {
-    "a", "an", "the", "of", "in", "for", "to", "by", "on", "with", "from", "that", "this", "their",
-    "its", "and", "or", "is", "are", "be", "been", "being", "was", "were", "will", "can", "could",
-    "should", "would", "may", "might", "has", "have", "had", "do", "does", "did", "using", "use",
-    "related", "concept", "concepts",
+    "a",
+    "an",
+    "the",
+    "of",
+    "in",
+    "for",
+    "to",
+    "by",
+    "on",
+    "with",
+    "from",
+    "that",
+    "this",
+    "their",
+    "its",
+    "and",
+    "or",
+    "is",
+    "are",
+    "be",
+    "been",
+    "being",
+    "was",
+    "were",
+    "will",
+    "can",
+    "could",
+    "should",
+    "would",
+    "may",
+    "might",
+    "has",
+    "have",
+    "had",
+    "do",
+    "does",
+    "did",
+    "using",
+    "use",
+    "related",
+    "concept",
+    "concepts",
 }
 _CONJ = {"and", "or", "the", "of", "in", "for", "to", "a"}
 
@@ -45,9 +84,9 @@ def merge_part_names(first: str, second: str) -> str:
     if first.lower() in second.lower():
         return second
     wa, wb = first.split(), second.split()
-    while wa and wa[-1].lower() in _CONJ:
+    while len(wa) > 1 and wa[-1].lower() in _CONJ:
         wa.pop()
-    while wb and wb[-1].lower() in _CONJ:
+    while len(wb) > 1 and wb[-1].lower() in _CONJ:
         wb.pop()
     combined = f"{' '.join(wa)} & {' '.join(wb)}"
     if len(combined.split()) <= MAX_PART_NAME_WORDS:
@@ -63,31 +102,76 @@ def _differentiator(chapter_los: list[dict], base_name: str) -> str:
     for lo in chapter_los:
         for word in (lo.get("primary_skill") or "").split():
             clean = word.strip(".,;:()")
-            if clean.lower() not in base and clean.lower() not in STOP_WORDS and clean.title() not in novel:
+            if (
+                clean.lower() not in base
+                and clean.lower() not in STOP_WORDS
+                and clean.title() not in novel
+            ):
                 novel.append(clean.title())
     return " ".join(novel[:2])
 
 
+def uniquify_part_names(parts: list[dict]) -> list[dict]:
+    """Make duplicate part (unit) names unique across the course, mirroring chapter uniquification:
+    prefer a skill-word differentiator from the part's own LOs, fall back to a numeric suffix.
+    """
+    from collections import Counter
+
+    counts = Counter(p["part_name"].strip().casefold() for p in parts)
+    seen: dict[str, int] = {}
+    used: set[str] = set()
+    for p in parts:
+        name = p["part_name"]
+        key = name.strip().casefold()
+        if counts[key] <= 1 and key not in used:
+            used.add(key)
+            continue
+        occ = seen.get(key, 0) + 1
+        seen[key] = occ
+        if occ == 1 and key not in used:
+            used.add(key)
+            continue
+        los = [
+            lo for c in p.get("chapters", []) for lo in c.get("learning_objectives", [])
+        ]
+        diff = _differentiator(los, base_name=name)
+        new = f"{name} - {diff}" if diff else f"{name} ({max(occ, 2)})"
+        n = 2
+        while new.strip().casefold() in used:
+            n += 1
+            new = f"{name} ({n})"
+        p["part_name"] = new
+        used.add(new.strip().casefold())
+    return parts
+
+
 def uniquify_chapter_names(chapters: list[dict]) -> list[dict]:
+    # All comparisons casefolded — "Multi Digit" and "Multi digit" are the same name.
     counts: dict[str, int] = {}
     for c in chapters:
-        counts[c["chapter_name"]] = counts.get(c["chapter_name"], 0) + 1
+        key = c["chapter_name"].strip().casefold()
+        counts[key] = counts.get(key, 0) + 1
     seen: dict[str, int] = {}
     used: set[str] = set()
     for c in chapters:
         name = c["chapter_name"]
-        if counts[name] <= 1:
-            used.add(name)
+        key = name.strip().casefold()
+        if counts[key] <= 1 and key not in used:
+            used.add(key)
             continue
-        occ = seen.get(name, 0) + 1
-        seen[name] = occ
-        if occ == 1:
-            used.add(name)
+        occ = seen.get(key, 0) + 1
+        seen[key] = occ
+        if occ == 1 and key not in used:
+            used.add(key)
             continue
         diff = _differentiator(c.get("learning_objectives", []), name)
-        new = f"{name} - {diff}" if diff else f"{name} ({occ})"
-        if new in used:
-            new = f"{name} ({occ})"
+        new = f"{name} - {diff}" if diff else f"{name} ({max(occ, 2)})"
+        if new.strip().casefold() in used:
+            new = f"{name} ({max(occ, 2)})"
+        n = 2
+        while new.strip().casefold() in used:
+            n += 1
+            new = f"{name} ({n})"
         c["chapter_name"] = new
-        used.add(new)
+        used.add(new.strip().casefold())
     return chapters

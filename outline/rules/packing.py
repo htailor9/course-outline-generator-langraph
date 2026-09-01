@@ -1,4 +1,5 @@
 """Bin-pack ordered LOs into lesson-sized understand chapters."""
+
 import copy
 
 from outline.rules.naming import chapter_base_name, uniquify_chapter_names

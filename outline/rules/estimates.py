@@ -1,9 +1,19 @@
 """Word and time estimates from grade band x Bloom's tier."""
+
 from outline.rules.grade_band import normalize
 
 GRADE_WORD_LIMITS = {"K-2": 400, "3-5": 600, "MS": 2000, "HS": 2250}
-GRADE_WORD_RANGES = {"K-2": (50, 200), "3-5": (50, 300), "MS": (200, 750), "HS": (300, 1000)}
-BLOOMS_TIME_RANGES = {"Foundational": (12, 18), "Intermediate": (15, 22), "Advanced": (20, 28)}
+GRADE_WORD_RANGES = {
+    "K-2": (50, 200),
+    "3-5": (50, 300),
+    "MS": (200, 750),
+    "HS": (300, 1000),
+}
+BLOOMS_TIME_RANGES = {
+    "Foundational": (12, 18),
+    "Intermediate": (15, 22),
+    "Advanced": (20, 28),
+}
 
 
 def word_limit(grade_band: str) -> int:
