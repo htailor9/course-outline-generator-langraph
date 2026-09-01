@@ -268,7 +268,10 @@ plus the standards-mode code override above.
 
 ## 5. Regeneration flows
 
-Two modes, one command. The baseline run folder is never modified — it *is* the undo.
+> Full reference with lesson-level scope, prompt-guard behaviour and all edge cases:
+> `docs/REGENERATION.md`. Summary below.
+
+Three scopes, one command. The baseline run folder is never modified — it *is* the undo.
 
 ```
 python -m outline regenerate runs/<prior-run> --unit 2    --prompt "..."   # one unit, others locked

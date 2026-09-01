@@ -69,6 +69,7 @@ clear message before any model call.
 | [docs/SETUP-AND-RUN.md](docs/SETUP-AND-RUN.md) | all setup, run, test, batch, comparison commands |
 | [docs/DESIGN-Course-Outline-Generator-LangGraph.md](docs/DESIGN-Course-Outline-Generator-LangGraph.md) | the binding design |
 | [docs/TEAM-WALKTHROUGH-43LOs.md](docs/TEAM-WALKTHROUGH-43LOs.md) | full logic, real 43-LO examples per agent type |
+| [docs/REGENERATION.md](docs/REGENERATION.md) | regeneration flows: step-by-step logic, real end-to-end examples, all edge cases |
 | [docs/SESSION-CONTEXT.md](docs/SESSION-CONTEXT.md) | current state, live results, decisions |
 | [docs/BUILD-GUIDE-Course-Outline-Generator.md](docs/BUILD-GUIDE-Course-Outline-Generator.md) | build-from-scratch + production notes |
 

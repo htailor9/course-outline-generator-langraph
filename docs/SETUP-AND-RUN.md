@@ -212,6 +212,7 @@ python scripts\compare_old_new.py
 
 ## 9. Key documents
 
+- `docs/REGENERATION.md` — regeneration flows: step-by-step logic, real examples, edge cases
 - `docs/DESIGN-Course-Outline-Generator-LangGraph.md` — the binding design
 - `docs/TEAM-WALKTHROUGH-43LOs.md` — full logic with real 43-LO examples per agent type
 - `docs/SESSION-CONTEXT.md` — current project state, results, decisions
