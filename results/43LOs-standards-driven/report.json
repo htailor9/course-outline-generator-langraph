@@ -1,0 +1,39 @@
+{
+  "provider": "claude_cli",
+  "n_los": 43,
+  "llm_calls": 17,
+  "errors": [],
+  "prompt_tokens": 720304,
+  "completion_tokens": 28490,
+  "max_prompt_tokens": 47266,
+  "by_node": {
+    "annotate": {
+      "calls": 2,
+      "prompt_tokens": 43170
+    },
+    "plan_chapters": {
+      "calls": 7,
+      "prompt_tokens": 321839
+    },
+    "plan_parts": {
+      "calls": 1,
+      "prompt_tokens": 46943
+    },
+    "titles": {
+      "calls": 7,
+      "prompt_tokens": 308352
+    }
+  },
+  "fallbacks": {},
+  "validation": [],
+  "enforcement_log": "FINAL: Part 'Logic And Reasoning Foundations' - 6 understand chapters OK\nFINAL: Part 'Combinatorics And Counting Methods' - 6 understand chapters OK\nFINAL: Part 'Recursive Sequences And Algorithms' - 6 understand chapters OK\nFINAL: Part 'Graph Theory And Network Algorithms' - 6 understand chapters OK\nFINAL: Part 'Voting Theory And Apportionment' - 6 understand chapters OK\nFINAL: Part 'Fair Division And Fairness Criteria' - 6 understand chapters OK\nFINAL: Part 'Number Systems And Information Theory' - 7 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 180,
+    "total_chapters": 76,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 146716,
+  "run_id": "20260831-154750_43LOs_Test-Math-Standards_claude_cli",
+  "started_at": "2026-08-31T15:47:50"
+}

@@ -1,0 +1,39 @@
+{
+  "provider": "claude_cli",
+  "n_los": 43,
+  "llm_calls": 14,
+  "errors": [],
+  "prompt_tokens": 583179,
+  "completion_tokens": 29928,
+  "max_prompt_tokens": 69862,
+  "by_node": {
+    "annotate": {
+      "calls": 2,
+      "prompt_tokens": 41864
+    },
+    "plan_chapters": {
+      "calls": 7,
+      "prompt_tokens": 341964
+    },
+    "plan_parts": {
+      "calls": 1,
+      "prompt_tokens": 21090
+    },
+    "titles": {
+      "calls": 4,
+      "prompt_tokens": 178261
+    }
+  },
+  "fallbacks": {},
+  "validation": [],
+  "enforcement_log": "MERGE: Part 'Counting And Combinatorics' (3 chapters) merged with 'Number Systems And Information Theory' (4 chapters)\nRESULT: Part 'Counting Combinatorics & Number Systems' now has 7 chapters\nMERGE: Part 'Sequences And Recursive Processes' (3 chapters) merged with 'Graph Theory And Networks' (3 chapters)\nRESULT: Part 'Sequences Recursive & Graph Theory' now has 6 chapters\nMERGE: Part 'Fair Division Methods' (3 chapters) merged with 'Voting Theory And Social Choice' (5 chapters)\nRESULT: Part 'Voting Theory & Fair Division' now has 8 chapters\nFINAL: Part 'Logical Reasoning And Argumentation' - 4 understand chapters OK\nFINAL: Part 'Counting Combinatorics & Number Systems' - 7 understand chapters OK\nFINAL: Part 'Sequences Recursive & Graph Theory' - 6 understand chapters OK\nFINAL: Part 'Voting Theory & Fair Division' - 8 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 180,
+    "total_chapters": 46,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 186219,
+  "run_id": "20260827-203356_43LOs_Test-Math_claude_cli",
+  "started_at": "2026-08-27T20:33:56"
+}

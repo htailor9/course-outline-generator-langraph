@@ -1,0 +1,504 @@
+{
+    "PearsonExtSSOSession": "UnvGbv8nV9n9_dZT_NfItUP7QA8.*AAJTSQACMDIAAlNLABwzS3pESGNBa01yaVZzaU5NUnArVytDWThDRG89AAR0eXBlAANDVFMAAlMxAAIxNA..*",
+    "course_outline_progression": "standards_driven_progression",
+    "course_title": "Math for Middle School",
+    "grade_band": "MS",
+    "subject_area": "Mathematics",
+    "minutes_per_lesson": 45,
+    "lessons_per_week": 5,
+    "course_duration_weeks": 36,
+    "learning_objectives": [
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:65afd0d1-a604-4ac6-b35a-500e4c3e1561",
+            "objective": "Apply the commutative property to generate equivalent algebraic expressions."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:9bb6ef01-9dcb-4116-b49f-7a292077c4bf",
+            "objective": "Apply the associative property to generate equivalent algebraic expressions."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:81b2e847-3230-4fd2-ab1b-7f8fb33055b3",
+            "objective": "Apply the distributive property to generate equivalent algebraic expressions."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:cac9fa6b-e0c2-47fb-bff5-b34a284d9373",
+            "objective": "Identify when two algebraic expressions are equivalent by substituting various values for the variables and comparing results."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:8f8f8520-8818-4fb3-9eae-1214db8413a5",
+            "objective": "Write numerical expressions involving whole-number exponents to represent given situations."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:5a218bc8-9beb-4d18-8213-26e2e166389c",
+            "objective": "Evaluate numerical expressions involving whole-number exponents using order of operations."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:bf0cab37-b05d-473f-bd99-3bf6c8f8d74d",
+            "objective": "Substitute specific values for variables in algebraic expressions."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:da4a1f15-fac5-44b5-a84f-825478ab4579",
+            "objective": "Evaluate algebraic expressions using the conventional order of operations when no parentheses specify a particular order."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:8227077c-7b1a-4a19-9f60-3ccabc9cd291",
+            "objective": "Evaluate expressions that arise from real-world formulas by substituting given values."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:3accc2a1-2c28-4a94-93a7-a49699dc98c1",
+            "objective": "Identify parts of algebraic expressions using mathematical terms including sum, term, product, factor, quotient, and coefficient."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:9ac76cfc-5a9c-4d26-9a7a-11a5a4c50d8f",
+            "objective": "Recognize one or more parts of an algebraic expression as a single entity for computational purposes."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:9bdaa500-df67-4140-a6ec-6c3af5d29201",
+            "objective": "Write algebraic expressions that record operations with numbers and variables to represent mathematical situations."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:821c1bf9-21e9-41e5-9bf6-c0cc20136fcf",
+            "objective": "Write equations of the form x + p = q to represent real-world and mathematical problems involving nonnegative rational numbers."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:84306136-c901-4616-835f-c5f195ffd53f",
+            "objective": "Write equations of the form px = q to represent real-world and mathematical problems involving nonnegative rational numbers."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:2b3da2ad-f605-4def-803c-c0b856f1e1c8",
+            "objective": "Solve equations of the form x + p = q where all values are nonnegative rational numbers."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:7d592c67-212c-476f-ac4b-1322853ef076",
+            "objective": "Solve equations of the form px = q where all values are nonnegative rational numbers."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:910a66dd-d832-432a-88a8-e54097b5913e",
+            "objective": "Explain that solving an equation or inequality means finding which values from a given set make the mathematical statement true."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:1341fe9d-44b1-44e6-ac5f-0d0f2a784503",
+            "objective": "Apply substitution to determine whether a specific number from a given set makes an equation true."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:5b0aeeae-def6-4942-aa5d-de170be98276",
+            "objective": "Apply substitution to determine whether a specific number from a given set makes an inequality true."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:015d3a51-50f2-4967-8cdd-a626c13e11c2",
+            "objective": "Use variables to represent numbers when solving real-world problems."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:5824bcd8-9533-4358-970b-051370bfddf5",
+            "objective": "Write expressions using variables when solving mathematical problems."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:d83acb70-adaa-4586-b639-882ac05643ff",
+            "objective": "Explain that a variable can represent an unknown number in an expression."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:d9c647e8-039b-483d-8622-d91275db0393",
+            "objective": "Explain that a variable can represent any number from a specified set depending on the context."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:92749c35-9e12-4f01-b8e1-e7d12a19e5b7",
+            "objective": "Write inequalities of the form x > c or x < c to represent constraints in real-world and mathematical problems."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:30f40e23-1c3c-4e65-a610-7bf1807fa417",
+            "objective": "Recognize that inequalities of the form x > c or x < c have infinitely many solutions."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:fb981f1a-b92b-4486-9ae5-4e6b0225522b",
+            "objective": "Represent solutions of inequalities on number line diagrams."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:6ba4045b-0ed1-4c63-b35e-d0980093b01e",
+            "objective": "Use variables to represent two quantities in a real-world problem that change in relationship to one another."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:c6822a67-191a-44c5-a1a1-0714aa34d429",
+            "objective": "Write an equation expressing the dependent variable in terms of the independent variable."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:26df36c6-d7ff-4b9a-b591-190b620076b1",
+            "objective": "Analyze the relationship between dependent and independent variables using tables."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:f6203db6-e8ea-4bdb-9988-01bdda872b20",
+            "objective": "Analyze the relationship between dependent and independent variables using graphs."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:8247f13d-4ec8-4a6d-a9d9-bc1bcf866651",
+            "objective": "Relate graph and table representations to their corresponding equations."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:5f0a308e-cb86-4831-b447-a6467d1281cc",
+            "objective": "Draw polygons in the coordinate plane when given coordinates for the vertices."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:3d824487-4357-4fb1-90f1-77f99bbfbd8e",
+            "objective": "Calculate the length of horizontal or vertical sides of polygons using coordinates."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:a6ed4bb3-9cc8-40c1-ab1b-308d9140ee31",
+            "objective": "Apply coordinate geometry techniques to solve real-world problems involving polygons."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:152e25b7-4241-4e0c-acb8-e5ec38cd7448",
+            "objective": "Calculate the area of right triangles by composing into rectangles or decomposing into component shapes."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:5ed49dd8-3e07-4ea5-8ad7-9ceee3555a21",
+            "objective": "Calculate the area of general triangles by composing into rectangles or decomposing into component shapes."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:cc064300-dc2f-4841-87c8-f7ca034d7964",
+            "objective": "Calculate the area of special quadrilaterals by composing into rectangles or decomposing into component shapes."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:af373c1b-7370-41c4-8125-f53b7cf52f7b",
+            "objective": "Calculate the area of polygons by composing into rectangles or decomposing into triangles and other shapes."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:dae4623f-f25a-4f21-b136-5da5917fd6fa",
+            "objective": "Apply area calculation techniques to solve real-world problems involving composite shapes."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:73c73255-0bf4-4a95-a8f4-d22f73ca6b55",
+            "objective": "Calculate the volume of right rectangular prisms with fractional edge lengths using unit cube packing."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:3c8190a2-9ceb-4e08-b412-ec5bb8227cea",
+            "objective": "Demonstrate that volume calculated by packing unit cubes equals volume calculated by multiplying edge lengths."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:88f9baa7-4cb8-4f47-9cc2-7f1256400097",
+            "objective": "Apply the formula V = lwh to calculate volumes of right rectangular prisms with fractional edge lengths."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:d2a8e0fa-f6cf-4529-bd80-609f4ffc27a4",
+            "objective": "Apply the formula V = Bh to calculate volumes of right rectangular prisms with fractional edge lengths."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:59daf0c0-1fe7-4a24-b3e9-99f3f09e707a",
+            "objective": "Apply volume formulas to solve real-world problems involving right rectangular prisms with fractional dimensions."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:6ec52f72-9749-4849-bb52-99071a894ac7",
+            "objective": "Construct nets of three-dimensional figures using rectangles and triangles."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:7a4a8213-a773-426d-a530-1290e0425079",
+            "objective": "Calculate the surface area of three-dimensional figures using their nets."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:833cece1-9957-4b6a-9b4e-48036e37b870",
+            "objective": "Apply net construction and surface area calculation techniques to solve real-world problems."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:6a80d8ad-69a4-4332-af72-e7453f0e6892",
+            "objective": "Define a ratio as a comparison between two quantities."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:3de0a47b-1ce5-48c6-be23-6795444878b3",
+            "objective": "Use ratio language to describe relationships between two quantities in word form."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:316bb582-319d-4bbf-b347-dfeafaadddb5",
+            "objective": "Express ratios using appropriate mathematical notation and terminology."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:f23166de-0cf0-4683-8c66-426e14fb84de",
+            "objective": "Define a unit rate as a ratio with a denominator of one."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:f2383717-ec19-40bb-ad6c-9ca814dcbf86",
+            "objective": "Calculate unit rates from given ratios where the second quantity is not zero."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:5d8eeb59-85bd-417f-b44e-188dc1f17979",
+            "objective": "Use rate language to describe ratio relationships in real-world contexts."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:4976c90b-80b3-42df-9578-17d0d60fa365",
+            "objective": "Calculate a percent of a quantity using the rate per 100 interpretation."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:ca1ff713-d548-4cfb-bb13-32d254acfe83",
+            "objective": "Solve problems to find the whole when given a part and the percent."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:d8be2c05-d09e-4024-b347-c89ce3a393e6",
+            "objective": "Create tables of equivalent ratios relating quantities with whole-number measurements."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:723e4b82-1013-408d-9c95-6be7d53943c2",
+            "objective": "Calculate missing values in tables of equivalent ratios."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:1e969c3b-b8d9-4544-afd1-8d9dc56a3f29",
+            "objective": "Plot pairs of values from ratio tables on the coordinate plane."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:7a32700b-bc59-4f54-9b17-5363e69302ce",
+            "objective": "Compare ratios using tables."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:d9523c33-2525-46af-8532-517ed9bcfcc8",
+            "objective": "Solve unit rate problems involving unit pricing."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:86cca09e-ba5f-473b-91a0-408514a302ed",
+            "objective": "Solve unit rate problems involving constant speed."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:1c8757ad-35cf-4edd-9316-071f09cc11ad",
+            "objective": "Convert measurement units using ratio reasoning."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:078fe4dd-e53b-4f19-a392-f7e7a39ebd2f",
+            "objective": "Transform units appropriately when multiplying quantities."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:44cf2fd6-91d4-4e2d-a3c1-eb3c7291e068",
+            "objective": "Transform units appropriately when dividing quantities."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:c4efaaa6-4321-46fc-85d4-20e343132917",
+            "objective": "Identify statistical questions as those that anticipate variability in data and account for it in answers."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:e689f5ef-1c77-4ab5-9e1f-5eebe1094187",
+            "objective": "Recognize that measures of center summarize all values in a data set with a single number."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:0f9a2233-ef59-46db-90dc-fe3dd081ae0f",
+            "objective": "Recognize that measures of variation describe how values in a data set vary with a single number."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:9fe911f5-72e3-45bc-b5ce-023e1f0164a5",
+            "objective": "Recognize that data collected to answer a statistical question forms a distribution."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:9e491276-3f30-44d3-a4aa-83a481fbaebb",
+            "objective": "Identify the center as a characteristic that describes a data distribution."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:cbcd8ce8-44ee-4b7b-9008-62d2280a078f",
+            "objective": "Identify the spread as a characteristic that describes a data distribution."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:8ae5637b-bc98-4f65-a372-a15b5deff710",
+            "objective": "Identify the overall shape as a characteristic that describes a data distribution."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:e226bb83-6556-4771-a851-6ba299a08669",
+            "objective": "Create dot plots to display numerical data on a number line."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:cabdcfcb-28e3-4a5b-b77c-d123b331c2fd",
+            "objective": "Create histograms to display numerical data."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:98299bc9-97f9-45f6-8ac4-5d0e059f7804",
+            "objective": "Create box plots to display numerical data on a number line."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:8fdc03fc-be8e-45da-842d-42b9bd67a7d5",
+            "objective": "Describe the nature of attributes under statistical investigation including measurement methods and units."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:7ca2edf4-fdd6-4ea1-ab90-169a70131f87",
+            "objective": "Calculate quantitative measures of center including median and mean for numerical data sets."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:dc5844f9-52e5-4832-9e97-262dd425ec66",
+            "objective": "Calculate quantitative measures of variability including interquartile range and mean absolute deviation."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:d96995b7-4e3c-4f43-9c90-a665210f1799",
+            "objective": "Describe overall patterns in data distributions with reference to the context."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:4bb31b64-e00c-409f-afe3-3fc7b59e8e91",
+            "objective": "Identify striking deviations from overall patterns in data with reference to the context."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:aedfa10b-9e12-44ef-acc2-31f15fc97781",
+            "objective": "Select appropriate measures of center based on the shape of the data distribution and context."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:70987728-fb0e-4a1e-ab10-8d5810731397",
+            "objective": "Select appropriate measures of variability based on the shape of the data distribution and context."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:ed6664a7-50c5-4f9d-b0b0-12568ce57b13",
+            "objective": "Report the number of observations in a data set as part of statistical summaries."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:7043e667-178d-41a9-b06b-732b9402de91",
+            "objective": "Explain the meaning of quotients when dividing fractions by fractions."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:9ea55138-9e96-4b1a-8826-2fd0f340dd60",
+            "objective": "Compute quotients when dividing fractions by fractions using standard algorithms."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:7e8d1907-f66d-43d9-b00f-1e4a593b3089",
+            "objective": "Solve word problems involving division of fractions by fractions."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:582cbd21-63c5-4548-9ed5-06d06512f29c",
+            "objective": "Use visual fraction models to represent division of fractions by fractions."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:38114797-9923-4ac7-a48a-1ced1fe3eae0",
+            "objective": "Write equations to represent word problems involving division of fractions by fractions."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:a03d5598-c637-4ad7-be8c-0d47eaa8aeb6",
+            "objective": "Graph points in all four quadrants of the coordinate plane to solve real-world and mathematical problems."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:4222420a-c33a-4c7e-8c65-f8d62fd1e9b1",
+            "objective": "Calculate distances between points with the same first coordinate using coordinates and absolute value."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:2912b0fe-e488-4a87-aa5e-40a3f16d3766",
+            "objective": "Calculate distances between points with the same second coordinate using coordinates and absolute value."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:70c49fe0-c22f-4e28-a8ca-3c681c5ffad1",
+            "objective": "Position integers and rational numbers on horizontal number line diagrams."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:6257b6cc-0148-4b6f-8b92-f56be0dd7e9e",
+            "objective": "Position integers and rational numbers on vertical number line diagrams."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:75e8a860-565a-4e9f-81ce-70441c1815e4",
+            "objective": "Position pairs of integers and rational numbers on a coordinate plane."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:d7122ebf-18fe-4bcd-b3b3-d136d9a8e136",
+            "objective": "Recognize that opposite signs indicate locations on opposite sides of 0 on the number line."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:5793be28-3ff2-48f0-8073-b38b605738f8",
+            "objective": "Recognize that the opposite of the opposite of a number is the number itself."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:4f989f56-a7b8-41de-98c7-7c5e14b35976",
+            "objective": "Recognize that 0 is its own opposite."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:3343a2b0-86cb-4b45-9d53-479da6e3c181",
+            "objective": "Identify which quadrant contains a point based on the signs of its coordinates."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:5275c5eb-e368-493e-a0b0-1848db6bfacc",
+            "objective": "Explain how positive and negative signs in ordered pairs determine quadrant locations."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:b22fb26d-38ff-4d8d-8db6-680d925052c9",
+            "objective": "Recognize when two ordered pairs differ only by their signs."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:fbd77cbb-1dfb-4295-bea2-cd83f6e81029",
+            "objective": "Describe how points with coordinates that differ only by signs are related by reflections across axes."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:c6cc7b83-2a92-4953-b423-1f62508d60d8",
+            "objective": "Distinguish between comparisons of absolute value and statements about numerical order."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:dbe18b2d-84e7-4706-abe4-6b61d662d498",
+            "objective": "Explain inequality statements in terms of relative positions on a number line."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:c6be8c8e-cd26-409b-98d4-47fe5f26daa7",
+            "objective": "Describe the position of numbers on a number line based on inequality symbols."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:4aa16bc2-c3f5-4945-b103-374d808e54f4",
+            "objective": "Identify which number is farther left or right on a number line given an inequality statement."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:f9f6bce6-8800-40da-a99b-25a9ce3c8783",
+            "objective": "Define absolute value as the distance from zero on a number line."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:6a98ee0e-a311-418a-b6f2-087e5786bb2f",
+            "objective": "Calculate the absolute value of rational numbers."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:5064770b-7491-40fe-96e1-9c950cd25c54",
+            "objective": "Explain absolute value as magnitude in real-world situations involving positive quantities."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:a31a8fa2-b1d8-4ae4-8197-fcc45d8655c7",
+            "objective": "Explain absolute value as magnitude in real-world situations involving negative quantities."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:245180c2-6b97-4caa-b2a6-4676870b9466",
+            "objective": "Write statements of order for rational numbers using inequality symbols in real-world contexts."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:9f048254-041c-40de-aadd-9ea11a4d656f",
+            "objective": "Interpret statements of order for rational numbers presented with inequality symbols in real-world contexts."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:8b875f59-61ec-433d-a82e-6ae3414be8be",
+            "objective": "Explain the meaning of order statements for rational numbers by describing the relationship between the values in real-world contexts."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:aeabdc14-29a9-4897-9e55-624f1c2b9e20",
+            "objective": "Explain how positive and negative numbers describe quantities with opposite directions or values."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:2432caa4-4a4b-46eb-ac20-0822d8705d7e",
+            "objective": "Use positive numbers to represent quantities in real-world contexts."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:fe22d9a6-4bee-4121-ad11-6b4bfd4c7aa7",
+            "objective": "Use negative numbers to represent quantities in real-world contexts."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:9f185839-41b9-469e-8c09-94b22ae59e72",
+            "objective": "Explain the meaning of zero in various real-world contexts involving positive and negative numbers."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:833177a4-47c8-4aec-88ae-f2063aae97b4",
+            "objective": "Calculate the greatest common factor of two whole numbers less than or equal to 100."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:8a38038d-22ba-4b34-bcbe-168bbdee843a",
+            "objective": "Calculate the least common multiple of two whole numbers less than or equal to 12."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:f79897f0-2e17-4a45-8085-f3e58c6ac525",
+            "objective": "Apply the distributive property to express sums with common factors as multiples of sums with no common factors."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:a902e48d-bb69-44d9-bdc3-1b2bd8d9347b",
+            "objective": "Add multi-digit decimals using the standard algorithm."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:8dcf9d7e-c69a-4d38-86d7-be7a53950999",
+            "objective": "Subtract multi-digit decimals using the standard algorithm."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:8febd2c1-1833-4da9-a246-9f589a3007a0",
+            "objective": "Multiply multi-digit decimals using the standard algorithm."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:9e0a23ab-ab04-4615-b159-b0f3c8b38185",
+            "objective": "Divide multi-digit decimals using the standard algorithm."
+        },
+        {
+            "learning_objective_urn": "urn:pearson:learninggoal:c639716c-a456-41e9-a1d0-33beb84bf6a0",
+            "objective": "Divide multi-digit whole numbers using the standard algorithm."
+        }
+    ]
+}

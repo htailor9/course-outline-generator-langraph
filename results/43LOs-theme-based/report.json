@@ -1,0 +1,50 @@
+{
+  "provider": "claude_cli",
+  "n_los": 43,
+  "llm_calls": 0,
+  "errors": [
+    {
+      "node": "annotate",
+      "error": "structured output failed for AnnotateOut: success"
+    },
+    {
+      "node": "annotate",
+      "error": "structured output failed for AnnotateOut: success"
+    },
+    {
+      "node": "plan_parts",
+      "error": "structured output failed for PartsOut: success"
+    },
+    {
+      "node": "plan_chapters",
+      "part": "P1",
+      "error": "structured output failed for ChaptersOut: success"
+    },
+    {
+      "node": "titles",
+      "part": 2,
+      "error": "structured output failed for TitlesOut: success"
+    }
+  ],
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "max_prompt_tokens": 0,
+  "by_node": {},
+  "fallbacks": {
+    "annotate_fallback": 43,
+    "plan_parts_fallback": 43,
+    "plan_chapters_fallback": 43,
+    "titles_fallback": 43
+  },
+  "validation": [],
+  "enforcement_log": "FINAL: Part 'Test_Math_Theme Core Concepts' - 43 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 180,
+    "total_chapters": 52,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 64068,
+  "run_id": "20260831-113546_43LOs_Test-Math-Theme_claude_cli",
+  "started_at": "2026-08-31T11:35:46"
+}

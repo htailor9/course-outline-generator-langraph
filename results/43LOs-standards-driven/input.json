@@ -1,0 +1,183 @@
+{
+  "course_outline_progression": "STANDARDS_DRIVEN_PROGRESSION",
+  "course_title": "Test_Math_Standards",
+  "grade_band": "MS",
+  "subject_area": "Math",
+  "minutes_per_lesson": 60,
+  "lessons_per_week": 5,
+  "course_duration_weeks": 36,
+  "learning_objectives": [
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:36612654-3315-4403-9170-f4acf4a05604",
+      "objective": "Construct valid logical arguments using premises and conclusions in symbolic form."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:047dedb2-9092-4fc6-a2d7-070c5bb5d241",
+      "objective": "Apply rules of inference including modus ponens and modus tollens to derive logical conclusions."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:2663de0d-9dd8-4da8-8b10-a60e27b8ee17",
+      "objective": "Identify logical fallacies in arguments including ad hominem, straw man, and false dilemma."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:265c1167-4a37-4a95-988f-fb786edbbb07",
+      "objective": "Evaluate the validity of deductive arguments using truth tables and logical equivalences."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:f848e6ad-10b5-45a3-aa33-75b0e7f683ec",
+      "objective": "Apply quantifiers including universal and existential quantifiers to express mathematical statements."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:dece7cc4-3649-491f-9dae-f76868b17803",
+      "objective": "Construct counterexamples to disprove invalid logical statements or conjectures."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:a271a145-134a-419b-bfcd-60bafb51f2cf",
+      "objective": "Apply the multiplication principle to calculate the number of outcomes in multi-step counting problems."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:b1c4b83d-18e9-4d4f-b771-8c86079a21b9",
+      "objective": "Calculate permutations of distinct objects using the formula nPr = n!/(n-r)! for situations requiring ordered arrangements."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:c23f33be-4e8a-41e2-8d82-ad32a45dd334",
+      "objective": "Calculate combinations of distinct objects using the formula nCr = n!/[r!(n-r)!] for situations where order does not matter."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:82a6dc89-a87f-4a7a-94fc-051f745dd588",
+      "objective": "Solve counting problems involving arrangements with repetition using exponential notation."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:6b148b7d-16ee-4c6f-b4c6-304de1c78e8f",
+      "objective": "Apply the inclusion-exclusion principle to determine the number of elements in unions and intersections of finite sets."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:6133fcf8-74b5-4201-801a-eb676fdcd5ac",
+      "objective": "Analyze counting scenarios to determine which counting technique is most appropriate for the given constraints."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:2eb7e9fb-9821-468d-a3d9-95becbf4ca77",
+      "objective": "Define recursive sequences using explicit formulas and initial conditions."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:68a3932b-0e09-4a02-a040-07a3afa84dab",
+      "objective": "Calculate terms of recursive sequences including arithmetic and geometric progressions."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:1fc80674-3bab-48a2-ac5a-229aede60838",
+      "objective": "Apply the Fibonacci sequence and its properties to solve modeling problems."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:ac6dda12-50c0-4b4c-a31d-8ace5f8e360d",
+      "objective": "Implement recursive algorithms to solve problems involving factorial and combinatorial calculations."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:b8504d65-6617-49f2-afbd-68e66552042f",
+      "objective": "Analyze the convergence behavior of recursive sequences using limit techniques."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:0f5141d8-ea0b-411a-a05e-3db785209cae",
+      "objective": "Model real-world phenomena using recursive relationships including population growth and financial investments."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:3baf1346-4c13-411f-8e34-5e5d5dfe85be",
+      "objective": "Apply Dijkstra's algorithm to find the shortest path between vertices in a weighted graph."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:34793e45-c97b-4c82-b937-d342266d9461",
+      "objective": "Implement Kruskal's algorithm to determine the minimum spanning tree of a connected graph."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:e5d63761-80a6-4e45-9ce5-8d8d71b659a3",
+      "objective": "Analyze network flow problems using the Ford-Fulkerson method to find maximum flow."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:628e0ac5-d254-46b6-a8f6-0ccbe4ab95d7",
+      "objective": "Solve the traveling salesperson problem using nearest neighbor and brute force algorithms."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:e393728b-ad7f-41ef-af69-a229af7b8ed9",
+      "objective": "Apply graph coloring algorithms to solve scheduling and assignment problems with constraints."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:8b7b2230-9e25-415b-9dc6-b53d3856f4f7",
+      "objective": "Evaluate network reliability by calculating connectivity and identifying critical paths."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:3b6ac287-7ec2-414d-9a89-16a994b4ce80",
+      "objective": "Calculate voting power indices such as the Banzhaf power index for weighted voting systems."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:65db928d-e83a-4b53-8cf5-bb317fae216c",
+      "objective": "Apply Arrow's Impossibility Theorem to analyze the limitations of voting systems in meeting fairness criteria."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:11eb8696-de67-4100-8bb7-bd320c9f7c96",
+      "objective": "Implement different voting methods including plurality, Borda count, and instant runoff to determine winners."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:8fe113c4-5b6d-46c6-b257-a6a24a9ab695",
+      "objective": "Analyze apportionment methods such as Hamilton's, Jefferson's, and Webster's methods for allocating legislative seats."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:2eb870a8-bc89-43fb-92cd-4a600f6b0e2f",
+      "objective": "Evaluate voting systems against fairness criteria including majority criterion, Condorcet criterion, and independence of irrelevant alternatives."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:f1c9d7ed-64b6-404e-9fcf-e75979a484a7",
+      "objective": "Calculate the Shapley-Shubik power index to measure influence in coalition-based decision making."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:1b4e0e3b-7d8d-4d4d-a8fc-4845d138d10f",
+      "objective": "Apply the divider-chooser method to divide goods or resources fairly between two parties."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:0548e1f8-09a4-4822-a531-cb4fc416f954",
+      "objective": "Implement the lone-divider method to achieve proportional division among multiple parties."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:1d7b016a-88cf-4c49-922e-8761595f100e",
+      "objective": "Execute the last-diminisher method to ensure each participant receives a fair share according to their valuation."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:48ec4ed0-ebbe-4b61-96b8-ef395bedbf6a",
+      "objective": "Calculate fair shares using the adjusted winner procedure for two-party disputes with multiple issues."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:640692e2-1dc5-4624-ae7c-45e87f099526",
+      "objective": "Analyze real-world scenarios to determine which fair division algorithm is most appropriate for the given constraints."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:2fa2d1ab-9f3a-4617-9900-4ae2d0056963",
+      "objective": "Evaluate the fairness of proposed divisions using mathematical criteria such as proportionality and envy-freeness."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:ccfe6573-2960-4795-98bb-0e801023b403",
+      "objective": "Convert between different number bases including binary, octal, and hexadecimal systems."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:1fbfdbfb-e0bf-48c1-92bb-a4a557e224b1",
+      "objective": "Apply Boolean algebra operations including AND, OR, and NOT to simplify logical expressions."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:81549cf1-20a3-4651-9d4f-3a14c8f4c4c2",
+      "objective": "Design truth tables to represent logical relationships and evaluate compound statements."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:64bd8dd6-8918-41ca-b99f-7f0dbb7b347d",
+      "objective": "Implement error-detection codes such as check digits and parity bits to identify data transmission errors."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:b2f8c436-769a-45e1-a838-62aac62f0bb1",
+      "objective": "Analyze data compression techniques to calculate compression ratios and storage efficiency."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:29381402-918d-4877-8b2d-8afb2224977a",
+      "objective": "Evaluate algorithmic efficiency by comparing time and space complexity of different algorithms."
+    },
+    {
+      "learning_objective_urn": "urn:pearson:learninggoal:86eb9d2b-c6b0-421c-af01-e92a7103ed73",
+      "objective": "Apply cryptographic methods including Caesar ciphers and modular arithmetic for data encryption."
+    }
+  ]
+}

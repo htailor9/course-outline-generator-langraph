@@ -1,0 +1,16 @@
+provider: anthropic            # anthropic | openai | bedrock_converse | claude_cli
+models:
+  default: claude-sonnet-4-5
+  annotate: claude-haiku-4-5
+  titles: claude-haiku-4-5
+# Bedrock Claude 4.5 on-demand usage requires inference profile ids, for example:
+# provider: bedrock_converse
+# models:
+#   default: us.anthropic.claude-sonnet-4-5-20250929-v1:0
+#   annotate: us.anthropic.claude-haiku-4-5-20251001-v1:0
+#   titles: us.anthropic.claude-haiku-4-5-20251001-v1:0
+batch_size: 30
+max_concurrency: 5
+skill_mode_threshold: 300
+llm_timeout_seconds: 90
+transport_retries: 3
