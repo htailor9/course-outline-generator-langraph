@@ -266,7 +266,92 @@ code did everything else — tier, order, estimates, numbering, assessment, JSON
 The only thing that changes between types is the PROGRESSION paragraph injected into the planner prompts —
 plus the standards-mode code override above.
 
-## 5. Where to look
+## 5. Regeneration flows
+
+Two modes, one command. The baseline run folder is never modified — it *is* the undo.
+
+```
+python -m outline regenerate runs/<prior-run> --unit 2    --prompt "..."   # one unit, others locked
+python -m outline regenerate runs/<prior-run> --unit all  --prompt "..."   # full course, prior outline as context
+```
+
+### 5.1 FULL-course regeneration (`--unit all`) — step-by-step
+
+Example: baseline = the 43-LO `Test_Math` run (4 units), prompt = *"broader, real-world themed units"*.
+
+```
+① LOAD BASELINE                                                        [code]
+   read runs/<prior>/input.json   → the original request (43 LOs, calendar, progression)
+   read runs/<prior>/outline.json → the previous result (4 units, 25 lessons, 43 titles)
+
+② BUILD THE CONTEXT BLOCK                                              [code]
+   Compress the OLD outline to names only (~10 tokens/lesson — never the JSON):
+
+     REGENERATION: the whole course outline is being regenerated. The PREVIOUS outline is
+     summarised below — produce an improved outline per the user guidance; keep what was
+     good, do not simply repeat it, and do not reuse previous names unless they are
+     clearly still the best choice.
+     PREVIOUS UNIT 'Logical Reasoning And Argumentation': Logical Fallacies; Valid
+       Arguments; Quantifiers And Counterexamples; Truth Tables
+     PREVIOUS UNIT 'Counting Combinatorics & Number Systems': Permutations And
+       Combinations; Multiplication And Repetition; … (7 lessons)
+     PREVIOUS UNIT 'Sequences Recursive & Graph Theory': … (6 lessons)
+     PREVIOUS UNIT 'Voting Theory & Fair Division': … (8 lessons)
+
+③ INJECT CONTEXT + USER PROMPT                                         [code]
+   raw_input ← baseline input
+   raw_input.user_prompt     = "broader, real-world themed units"   (priority header)
+   raw_input._regen_context  = the block from ②
+   ingest copies _regen_context into course; course_header appends it — so EVERY
+   planning prompt (plan_parts, plan_chapters, titles) sees:
+     COURSE / CALENDAR / PROGRESSION lines
+     USER GUIDANCE (takes PRIORITY … never overrides coverage/standards-order/structure): …
+     REGENERATION: … PREVIOUS UNIT … PREVIOUS UNIT …
+
+④ NORMAL 8-NODE GENERATION RUNS                                        [LLM + code]
+   annotate → plan_parts → plan_chapters → pack_and_merge → titles → assemble → validate
+   Nothing is locked: the model re-plans everything, but now it KNOWS the old structure —
+   it can keep strong groupings, rename weak ones, and avoid accidentally recreating the
+   same names verbatim. All hard guarantees still apply (43/43 placed, min-4, unique
+   names, numbering, standards order if applicable).
+
+⑤ WRITE A NEW RUN FOLDER + DIFF NOTE                                   [code]
+   runs/<ts>_43LOs_Test-Math-regen-full_<provider>/
+     input.json outline.json report.json enforcement.log analysis.md
+     regeneration.md:
+       - Baseline run: runs/<prior>  (untouched — restore by using it instead)
+       - User prompt: broader, real-world themed units
+       - Units before (4): Logical Reasoning And Argumentation; Counting …; Sequences …; Voting …
+       - Units after  (N): <the regenerated unit names>
+```
+
+Key design points:
+
+- **Context is a summary, not the document.** Only unit + lesson names go into prompts
+  (the old Berlin failure was re-feeding whole JSON through the model). ~40 lessons ≈ 400 tokens.
+- **Priority order inside the prompt**: progression rules < previous-outline context < USER
+  GUIDANCE — and code-owned rules sit above all three (coverage, standards order, structure
+  are unoverridable by construction).
+- **Determinism boundary unchanged**: the model only re-decides groupings and names; packing,
+  merging, estimates, numbering, assessments, pacing are recomputed by the same code.
+- **Undo = the baseline folder.** Every regeneration writes a new folder; nothing is edited
+  in place.
+
+### 5.2 UNIT-level regeneration (`--unit 2` or `--unit "Name"`) — contrast
+
+| | `--unit all` | `--unit N` |
+|---|---|---|
+| Rebuild state from prior outline | yes (for context only) | yes (as the working state) |
+| Locked | nothing | every other unit: placements, lesson names, module titles reused verbatim |
+| LLM calls | full pipeline (~14 at 43 LOs) | 2 (plan_chapters + titles for that unit) |
+| Context given to model | whole previous outline summary | that unit's previous lessons + module titles ("improve on these") |
+| Re-flow | full | full (so a shrunken unit may min-4-merge with a neighbour — reported) |
+| Diff note | units before/after | per-module title table before/after |
+
+Both verified by tests (non-target units byte-stable in unit mode; `PREVIOUS UNIT` context
+provably present in prompts in full mode) and by offline CLI smokes.
+
+## 6. Where to look
 
 - Code: `outline/` (nodes, rules, assemble, validate, prompts) · tests: `pytest -q` (66 passed)
 - Any run: `runs/<timestamp>_<N>LOs_<course>_<provider>/` → `input.json`, `outline.json`, `report.json`,

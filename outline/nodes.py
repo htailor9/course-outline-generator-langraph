@@ -72,6 +72,8 @@ def course_header(
             "fixed standards-framework order, or structural rules): "
             f"{course['user_prompt']}"
         )
+    if course.get("regen_context"):
+        lines.append(course["regen_context"])
     return "\n".join(lines)
 
 
@@ -106,6 +108,9 @@ def ingest(state: dict, config) -> dict:
         "course_duration_weeks": req.course_duration_weeks,
         "progression": req.course_outline_progression,
         "user_prompt": req.user_prompt,
+        # Full-course regeneration: prior-outline context injected by outline.regen via the raw
+        # payload; reaches every prompt through course_header. None on normal runs.
+        "regen_context": state["raw_input"].get("_regen_context"),
     }
     budget = {
         "total_lesson_days": req.lessons_per_week * req.course_duration_weeks,
@@ -371,6 +376,8 @@ async def plan_chapters(payload: dict, config) -> dict:
         payload["part_names"],
         this_part=part["part_name"],
     )
+    if payload.get("regen_context"):
+        header += "\n" + payload["regen_context"]
     got: dict[str, dict] = {}
     report = []
     pending = list(part["ids"])
@@ -487,6 +494,8 @@ async def titles(payload: dict, config) -> dict:
         payload["part_names"],
         this_part=part["part_name"],
     )
+    if payload.get("regen_context"):
+        header += "\n" + payload["regen_context"]
     chapter_of = {
         lo["id"]: c["chapter_name"]
         for c in part["chapters"]

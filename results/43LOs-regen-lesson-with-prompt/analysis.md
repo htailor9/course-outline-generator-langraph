@@ -1,0 +1,140 @@
+# Run analysis — 20260901-172728_43LOs_Test-Math-regen-lesson-Valid-Arguments_claude_cli
+
+Generated 2026-09-01T17:27:28 · provider **claude_cli** · models `{'default': 'sonnet', 'annotate': 'sonnet', 'titles': 'sonnet'}` · wall 12.3s
+
+## Verdict
+
+- ✅ all invariants passed
+- ✅ no LLM fallbacks
+- ✅ no LLM errors
+- ✅ pacing within tolerance
+
+## 1. Input
+
+| field | value |
+| --- | --- |
+| course_title | Test_Math |
+| grade_band | MS |
+| subject_area | Math |
+| progression | SKILLS_BASED_PROGRESSION |
+| learning objectives | 43 |
+| calendar | 5/wk × 36 wk = 180 lesson days |
+| minutes_per_lesson | 60 |
+| chapter word limit | 2000 |
+| user_prompt | more applied, real-world module titles |
+| batch_size / concurrency | 30 / 5 |
+| planning mode | id-level |
+
+## 2. Annotation (analyser stage)
+
+- Bloom's tier mix: Advanced 6, Foundational 9, Intermediate 28
+- Unique primary skills: **39** (top: Truth Tables ×2, Recursive Sequences ×2, Voting Power Indices ×2, Voting Fairness Criteria ×2, Logical Arguments ×1, Rules Of Inference ×1, Logical Fallacies ×1, Quantifiers ×1, Counterexamples ×1, Multiplication Principle ×1)
+
+## 3. Output structure
+
+- Parts: **7** (1 overview + 4 content + 2 semester) · Chapters: **46** · Modules: 59 · LO modules: 43
+- Content estimate: 19873 words · 2046 minutes across understand chapters
+- Min-4 merges applied: 0
+
+| # | type | part | chapters | understand | modules | LOs | words | minutes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | overview | Test_Math Course Overview | 1 | 0 | 2 | 0 | 0 | 60 |
+| 2 | understand | Logical Reasoning And Argumentation | 8 | 4 | 10 | 7 | 3509 | 378 |
+| 3 | understand | Counting Combinatorics & Number Systems | 11 | 7 | 15 | 12 | 5332 | 452 |
+| 4 | understand | Sequences Recursive & Graph Theory | 10 | 6 | 15 | 12 | 5516 | 456 |
+| 5 | understand | Voting Theory & Fair Division | 12 | 8 | 15 | 12 | 5516 | 460 |
+| 6 | semester | Test_Math Semester A Reflect & Review | 2 | 0 | 1 | 0 | 0 | 120 |
+| 7 | semester | Test_Math Semester B Reflect & Review | 2 | 0 | 1 | 0 | 0 | 120 |
+
+### Understand chapters
+
+| part | ch | chapter | LOs | words | min | limit | module titles |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2 | 2 | Logical Fallacies | 1 | 291 | 14 |  | Spotting Logical Fallacies |
+| 2 | 3 | Valid Arguments | 2 | 950 | 36 |  | Courtroom Argument Building; Detective-Style Deductive Reasoning |
+| 2 | 4 | Quantifiers And Counterexamples | 2 | 950 | 36 |  | Universal And Existential Quantifiers; Constructing Counterexamples |
+| 2 | 5 | Truth Tables | 2 | 1318 | 52 |  | Evaluating Argument Validity; Designing Truth Tables |
+| 3 | 2 | Permutations And Combinations | 2 | 582 | 28 |  | Permutations Of Distinct Objects; Combinations Of Distinct Objects |
+| 3 | 3 | Multiplication And Repetition | 2 | 950 | 36 |  | Multiplication Principle Basics; Arrangements With Repetition |
+| 3 | 4 | Combining Counting Techniques | 2 | 950 | 36 |  | Inclusion-Exclusion Principle; Choosing Counting Techniques |
+| 3 | 5 | Number Base Systems | 1 | 291 | 14 |  | Number Base Conversion |
+| 3 | 6 | Boolean Logic And Parity | 2 | 950 | 36 |  | Boolean Algebra Simplification; Error-Detection Codes |
+| 3 | 7 | Compression And Cryptography | 2 | 950 | 36 |  | Data Compression Ratios; Caesar Cipher Encryption |
+| 3 | 8 | Algorithmic Complexity Analysis | 1 | 659 | 26 |  | Algorithmic Efficiency Analysis |
+| 4 | 2 | Recursive Sequence Basics | 2 | 582 | 28 |  | Defining Recursive Sequences; Calculating Sequence Terms |
+| 4 | 3 | Fibonacci And Recursive Algorithms | 2 | 950 | 36 |  | Fibonacci Modeling Applications; Recursive Algorithm Implementation |
+| 4 | 4 | Convergence And Modeling | 2 | 950 | 36 |  | Sequence Convergence Analysis; Modeling Growth With Recursion |
+| 4 | 5 | Graph Optimization Algorithms | 3 | 1425 | 54 |  | Dijkstra's Shortest Path; Kruskal's Minimum Spanning Tree; Ford-Fulkerson Max Flow |
+| 4 | 6 | Combinatorial Graph Problems | 2 | 950 | 36 |  | Traveling Salesperson Algorithms; Graph Coloring Scheduling |
+| 4 | 7 | Network Reliability Analysis | 1 | 659 | 26 |  | Network Connectivity Evaluation |
+| 5 | 2 | Voting Power Indices | 2 | 582 | 28 |  | Banzhaf Power Index; Shapley-Shubik Power Index |
+| 5 | 3 | Voting Methods | 1 | 475 | 18 |  | Plurality Borda And Runoff |
+| 5 | 4 | Apportionment Methods | 1 | 475 | 18 |  | Hamilton Jefferson Webster Methods |
+| 5 | 5 | Arrow's Impossibility Theorem | 1 | 475 | 18 |  | Limits Of Voting Systems |
+| 5 | 6 | Evaluating Fairness Criteria | 1 | 659 | 26 |  | Assessing Voting Fairness Standards |
+| 5 | 7 | Two-Party Fair Division | 2 | 766 | 32 |  | Divider-Chooser Method; Adjusted Winner Procedure |
+| 5 | 8 | Multi-Party Division Methods | 2 | 950 | 36 |  | Lone-Divider Method; Last-Diminisher Method |
+| 5 | 9 | Fair Division Applications | 2 | 1134 | 44 |  | Selecting Fair Division Algorithms; Proportionality And Envy-Freeness |
+
+- Chapters over minute/word limit: **0**
+
+## 4. Pacing
+
+| metric | value |
+| --- | --- |
+| total_lesson_days | 180 |
+| total_chapters | 46 |
+| fill ratio | 26% |
+| overrun | False |
+| overrun days | None |
+
+- Pacing check: total_chapters_in_course=46 is below the lesson-day target range (171-189) for total_lesson_days=180. Course is under-filled.
+- Structure check: 4 content parts; all parts >= 4 understand chapters: True.
+
+## 5. LLM calls
+
+| metric | value |
+| --- | --- |
+| calls | 1 |
+| prompt tokens | 43058 |
+| completion tokens | 554 |
+| max single prompt | 43058 |
+| tokens per LO | 1014.2 |
+
+| node | calls | prompt tokens |
+| --- | --- | --- |
+| titles | 1 | 43058 |
+
+| # | role | part/batch | model | prompt | completion | ms | attempt |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | titles | 2 | claude-sonnet-5 | 43058 | 554 | 12299 | 1 |
+
+## 6. Quality signals
+
+| signal | value |
+| --- | --- |
+| module titles | 43 |
+| distinct titles | 43 |
+| avg words per title | 3.09 |
+| titles outside 2–5 words | 0 |
+| titles with generic words | 0 |
+| LO fallbacks by kind | none |
+| soft invariant failures | none |
+| LLM errors | none |
+
+## 7. Enforcement log
+
+```
+FINAL: Part 'Logical Reasoning And Argumentation' - 4 understand chapters OK
+FINAL: Part 'Counting Combinatorics & Number Systems' - 7 understand chapters OK
+FINAL: Part 'Sequences Recursive & Graph Theory' - 6 understand chapters OK
+FINAL: Part 'Voting Theory & Fair Division' - 8 understand chapters OK
+```
+
+## 8. Files
+
+- `input.json` — request as received
+- `outline.json` — DCIM course outline (response)
+- `report.json` — machine-readable metrics
+- `enforcement.log` — pack/merge decisions
+- `analysis.md` — this file

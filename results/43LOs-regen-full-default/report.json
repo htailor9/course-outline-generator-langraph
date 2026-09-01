@@ -1,0 +1,39 @@
+{
+  "provider": "claude_cli",
+  "n_los": 43,
+  "llm_calls": 14,
+  "errors": [],
+  "prompt_tokens": 599254,
+  "completion_tokens": 32254,
+  "max_prompt_tokens": 68898,
+  "by_node": {
+    "annotate": {
+      "calls": 2,
+      "prompt_tokens": 42822
+    },
+    "plan_chapters": {
+      "calls": 7,
+      "prompt_tokens": 320549
+    },
+    "plan_parts": {
+      "calls": 1,
+      "prompt_tokens": 51498
+    },
+    "titles": {
+      "calls": 4,
+      "prompt_tokens": 184385
+    }
+  },
+  "fallbacks": {},
+  "validation": [],
+  "enforcement_log": "MERGE: Part 'Counting And Combinatorics Techniques' (3 chapters) merged with 'Recursive Sequences And Modeling' (3 chapters)\nRESULT: Part 'Counting Combinatorics & Recursive Sequences' now has 6 chapters\nMERGE: Part 'Graph And Network Algorithms' (3 chapters) merged with 'Voting Theory And Apportionment' (3 chapters)\nRESULT: Part 'Graph Network & Voting Theory' now has 6 chapters\nMERGE: Part 'Fair Division Methods' (3 chapters) merged with 'Graph Network & Voting Theory' (6 chapters)\nRESULT: Part 'Graph Network & Fair Division' now has 9 chapters\nFINAL: Part 'Logical Reasoning Foundations' - 4 understand chapters OK\nFINAL: Part 'Counting Combinatorics & Recursive Sequences' - 6 understand chapters OK\nFINAL: Part 'Number Systems And Digital Computing' - 4 understand chapters OK\nFINAL: Part 'Graph Network & Fair Division' - 9 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 180,
+    "total_chapters": 44,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 182751,
+  "run_id": "20260901-173405_43LOs_Test-Math-regen-full_claude_cli",
+  "started_at": "2026-09-01T17:34:05"
+}

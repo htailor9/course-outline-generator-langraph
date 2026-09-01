@@ -11,6 +11,11 @@ so the evidence travels with the repo.
 | `43LOs-theme-based/` | THEME_BASED_PROGRESSION | 2026-08-31 11:35 | ✅ valid · 43/43 · 0 fallbacks |
 | `43LOs-chronological/` | CHRONOLOGICAL_PROGRESSION | 2026-08-31 11:37 | ✅ valid · 43/43 · 0 fallbacks |
 | `43LOs-user-prompt/` | SKILLS_BASED + `user_prompt` priority test | 2026-09-01 11:10 | ✅ valid · 43/43 · prompt honoured: exactly 3 units, all names ≤ 3 words, real-world lesson names |
+| `43LOs-regen-unit-with-prompt/` | UNIT regeneration, guided (unit 2, prompt: application-focused lesson names) | 2026-09-01 17:25 | ✅ valid · others locked · regeneration.md title diff |
+| `43LOs-regen-unit-default/` | UNIT regeneration, standard (unit 2, NO prompt — context only) | 2026-09-01 17:27 | ✅ valid · others locked |
+| `43LOs-regen-lesson-with-prompt/` | LESSON regeneration (unit 1, lesson 'Valid Arguments', prompt: applied real-world titles) | 2026-09-01 17:27 | ✅ valid · only that lesson's module titles changed |
+| `43LOs-regen-full-with-prompt/` | FULL-course regeneration, guided (previous outline as context + prompt: broader real-world units) | 2026-09-01 17:31 | ✅ valid · 43/43 · units before/after in regeneration.md |
+| `43LOs-regen-full-default/` | FULL-course regeneration, standard (previous outline as context, NO prompt) | 2026-09-01 17:34 | ✅ valid · 43/43 |
 
 Each folder contains:
 

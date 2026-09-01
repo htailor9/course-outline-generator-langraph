@@ -141,6 +141,35 @@ Note on `claude_cli` token numbers: `prompt_tokens` includes Claude Code's own s
 THEME_BASED_PROGRESSION | CHRONOLOGICAL_PROGRESSION` (case-insensitive; standards mode enforces
 input order in code). Ready-made progression variants: `runs\synthetic-inputs\input-43LOs-{theme,chrono,standards}.json`.
 
+## 4b. Regenerate one unit (context-based)
+
+Re-plans a single unit of a prior run; every other unit is locked (placements, lesson names,
+module titles reused verbatim). The previous version of the unit is passed to the model as
+context, and `--prompt` gets user priority. Output is a NEW run folder plus `regeneration.md`
+(before/after diff); the baseline folder is untouched — that is your undo.
+
+```powershell
+# list units: run with a wrong number, the error prints them all numbered
+python -m outline regenerate runs\<prior-run-folder> --unit 2 --prompt "fresher real-world lesson names" --provider claude_cli --model sonnet
+python -m outline regenerate runs\<prior-run-folder> --unit "Logic And Counting" --fake      # offline
+
+# FULL-course regeneration with previous-outline context: the prior unit/lesson structure is
+# summarised into every planning prompt ("improve, don't repeat"), --prompt has priority
+python -m outline regenerate runs\<prior-run-folder> --unit all --prompt "broader real-world units" --provider claude_cli --model sonnet
+
+# LESSON-level: regenerate ONLY one lesson's module titles (everything else locked).
+# Introduction/Apply/Review/Test/Semester lessons are not regenerable (STUDIOPE-94).
+python -m outline regenerate runs\<prior-run-folder> --unit 2 --lesson 3 --prompt "more applied titles"
+```
+
+**Prompt validation** (STUDIOPE-286/335/338): every `--prompt` (and `user_prompt` in generate
+inputs) is checked before any model call — markup/injection/override attempts and prompts
+unrelated to course-outline work are rejected with a clear message; max 2000 chars.
+
+The regenerated course re-flows through pack/merge/assemble/validate, so all guarantees
+(100 % coverage, min-4, unique names, numbering) hold; if the regenerated unit ends up under
+4 lessons it may merge with a neighbour — reported in `enforcement.log`/`regeneration.md`.
+
 ## 5. Tests
 
 ```powershell

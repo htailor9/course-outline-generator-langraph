@@ -28,6 +28,18 @@ python -m outline generate tests\fixtures\sample-input-43.json --provider claude
 Each run writes a timestamped folder under `runs/` with `input.json`, `outline.json`,
 `report.json`, `enforcement.log`, and a human-readable `analysis.md`.
 
+Regenerate a single unit of a prior run (others locked, previous version passed as context,
+baseline kept as undo):
+
+```powershell
+python -m outline regenerate runs\<prior-run> --unit 2 --prompt "fresher lesson names" --provider claude_cli --model sonnet
+python -m outline regenerate runs\<prior-run> --unit all --prompt "broader units"   # full course, prior outline as context
+python -m outline regenerate runs\<prior-run> --unit 2 --lesson 3 --prompt "..."    # one lesson's module titles only
+```
+
+User prompts are validated first: injection/markup and unrelated prompts are rejected with a
+clear message before any model call.
+
 ## Providers
 
 `--provider anthropic | openai | bedrock_converse | claude_cli`

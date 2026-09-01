@@ -1,0 +1,39 @@
+{
+  "provider": "claude_cli",
+  "n_los": 43,
+  "llm_calls": 13,
+  "errors": [],
+  "prompt_tokens": 539179,
+  "completion_tokens": 35872,
+  "max_prompt_tokens": 53748,
+  "by_node": {
+    "annotate": {
+      "calls": 2,
+      "prompt_tokens": 42998
+    },
+    "plan_chapters": {
+      "calls": 6,
+      "prompt_tokens": 260113
+    },
+    "plan_parts": {
+      "calls": 1,
+      "prompt_tokens": 53748
+    },
+    "titles": {
+      "calls": 4,
+      "prompt_tokens": 182320
+    }
+  },
+  "fallbacks": {},
+  "validation": [],
+  "enforcement_log": "MERGE: Part 'Counting And Combinatorics' (3 chapters) merged with 'Codes Ciphers And Data Security' (3 chapters)\nRESULT: Part 'Counting Combinatorics & Codes Ciphers' now has 6 chapters\nMERGE: Part 'Growth Patterns And Predictions' (3 chapters) merged with 'Networks And Route Optimization' (3 chapters)\nRESULT: Part 'Growth Patterns & Networks Route' now has 6 chapters\nFINAL: Part 'Critical Thinking And Persuasion' - 4 understand chapters OK\nFINAL: Part 'Counting Combinatorics & Codes Ciphers' - 6 understand chapters OK\nFINAL: Part 'Growth Patterns & Networks Route' - 6 understand chapters OK\nFINAL: Part 'Elections And Fair Sharing' - 6 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 180,
+    "total_chapters": 43,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 210162,
+  "run_id": "20260901-173100_43LOs_Test-Math-regen-full_claude_cli",
+  "started_at": "2026-09-01T17:31:00"
+}
