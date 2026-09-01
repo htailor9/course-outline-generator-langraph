@@ -16,8 +16,9 @@ Commands are PowerShell (Windows); the venv-relative `python` works the same fro
 ## 2. Install
 
 ```powershell
-cd C:\Users\a\Documents\Hiral\Berlin-Pearson
-py -3.13 -m venv .venv
+cd path_to_folder\course-outline-generator-langraph
+py -m venv .venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned   # if Activate.ps1 is blocked
 .\.venv\Scripts\Activate.ps1
 pip install -e ".[dev]"
 ```

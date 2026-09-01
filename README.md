@@ -18,7 +18,7 @@ ingest → annotate(LLM ∥) → plan_parts(LLM) → plan_chapters(LLM ∥) → 
 ## Quickstart
 
 ```powershell
-py -3.13 -m venv .venv ; .\.venv\Scripts\Activate.ps1
+py -m venv .venv ; .\.venv\Scripts\Activate.ps1
 pip install -e ".[dev]"
 python -m pytest -q                                                  # 69 passed, 1 skipped
 python -m outline generate tests\fixtures\sample-input-43.json --fake            # offline
