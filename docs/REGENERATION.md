@@ -102,6 +102,47 @@ L2 Modus Ponens And Tollens       → Detective-Style Deductive Reasoning
 
 Everything else — placements, all lesson/unit names, all other titles — byte-locked (tested).
 
+## 2b. How the previous output becomes prompt context (the mechanics)
+
+You never pass the previous input/output files individually — you pass the previous **run folder**;
+`load_run()` reads both `input.json` (the original request) and `outline.json` (the previous OUTPUT).
+The old outline is then treated as **data**: code walks the JSON tree and keeps only the *names* at
+the scope being regenerated. Nothing else from the old outline ever enters a prompt.
+
+Example — full-course regen on the 43-LO baseline. The ~68 KB `outline.json` is compressed by a
+plain Python loop (`_full_context`) into ~150 tokens:
+
+```
+68 KB previous outline.json  ──►  4 lines:
+PREVIOUS UNIT 'Logical Reasoning And Argumentation': Logical Fallacies; Valid Arguments;
+  Quantifiers And Counterexamples; Truth Tables
+PREVIOUS UNIT 'Counting Combinatorics & Number Systems': Permutations And Combinations; … (7 lessons)
+PREVIOUS UNIT 'Sequences Recursive & Graph Theory': …
+PREVIOUS UNIT 'Voting Theory & Fair Division': …
+```
+
+Injection routes (both end in `course_header`, so the block sits directly under USER GUIDANCE):
+
+| Scope | Builder | Route into the prompt | Which calls see it |
+|---|---|---|---|
+| `all` | `_full_context(prior_outline)` | `raw["_regen_context"]` → `ingest` → `course["regen_context"]` → `course_header` | every planning call (plan_parts, plan_chapters, titles) |
+| `unit` | `_regen_context(target)` — that unit's previous lessons + module titles | node `payload["regen_context"]` → header append | only the target unit's 2 calls |
+| `lesson` | target lesson's previous module titles | same payload route | exactly one `titles` call |
+
+Scope of context — target only, plus one nuance:
+
+- The **"PREVIOUS …" block contains only the target scope's old names** (unit mode: that unit;
+  lesson mode: that lesson). No other unit's lessons or titles ever enter a prompt.
+- The standard header's `UNITS:` line still lists **all unit names** (names only) so the model
+  stays coherent with the rest of the course and avoids name collisions.
+- Everything else from the old outline reaches the new run **through code, not prompts**:
+  `state_from_outline()` reads back every LO's placement/rank/title, and non-target material is
+  reused verbatim (byte-locked — tested 31/31 identical modules in unit mode).
+
+Priority stack the model sees, top-down: `--prompt` (explicit priority) → previous-version
+context → progression rules — with the code-owned guarantees (coverage, min-4, standards order,
+numbering) above all of it, unoverridable by anything in the prompt.
+
 ## 3. End-to-end example: one LO through a unit regeneration
 
 `L8` ("Calculate permutations of distinct objects…") during the guided unit-2 regeneration:
