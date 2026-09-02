@@ -66,6 +66,7 @@ clear message before any model call.
 
 | Doc | What |
 |---|---|
+| [docs/SIMPLE-GUIDE.md](docs/SIMPLE-GUIDE.md) | plain-language walkthrough: what the LLM does vs what Python does, with tiny examples |
 | [docs/SETUP-AND-RUN.md](docs/SETUP-AND-RUN.md) | all setup, run, test, batch, comparison commands |
 | [docs/DESIGN-Course-Outline-Generator-LangGraph.md](docs/DESIGN-Course-Outline-Generator-LangGraph.md) | the binding design |
 | [docs/TEAM-WALKTHROUGH-43LOs.md](docs/TEAM-WALKTHROUGH-43LOs.md) | full logic, real 43-LO examples per agent type |
