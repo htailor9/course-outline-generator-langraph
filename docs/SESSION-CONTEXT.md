@@ -135,6 +135,22 @@ Executed via superpowers subagent-driven development: fresh implementer + review
 - Deferred minors listed in the ledger (estimates tested MS band only, uniquify mutates input, etc.).
 - `config.yaml` ships Claude model ids; `--provider openai|bedrock_converse` needs `models:` overridden.
 
+## 7b. Berlin parity — challenges & limitations (assessed 2026-09-02)
+
+Rebuilding this design node-by-node inside Berlin hits structural limits: (1) no shared id-keyed
+state/reducers — every hop is an LLM-forwarded payload, the exact data-bus failure we measured;
+(2) no `Send()` map-reduce in the visual DAG — parallel batches/per-unit planners would move inside
+REST tools anyway; (3) code steps only exist as REST tool nodes (+ HTTP hops and the `"{{ var }}"`
+JSON-stringification double-encoding hazard); (4) no schema-enforced structured output or
+validate→re-ask→fallback loops — the malformed/truncated-JSON failure class returns; (5) terminal
+LLM synthesizer convention vs our code assembler (fixable: terminal REST assemble+validate node,
+LLM emits titles only — highest-value single change if staying in Berlin); (6) stateless runs — the
+regeneration flows (baseline load, scope locking, context blocks) need an external service plus
+graph variants; (7) no offline tests/CI for visual graphs; (8) llmlogs-only observability vs our
+run folders/report/analysis. **Recommendation stands: Berlin calls this pipeline as ONE tool node
+(generate + regenerate endpoints); node-by-node parity puts ~80 % of the logic behind REST anyway
+while keeping the fragile LLM hops in Berlin.**
+
 ## 8. Immediate next steps (suggested)
 
 1. `git add -A`-free commit of staged work: `git commit -m "feat: LangGraph course outline generator (MVP)"` — only when user says so.
