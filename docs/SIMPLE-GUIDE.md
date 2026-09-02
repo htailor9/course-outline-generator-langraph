@@ -218,34 +218,228 @@ So the pipeline **always finishes with a valid outline**; the report tells you h
 parts fell back. Live proof: one provider timeout mid-run → 12 lesson names fell back, outline
 still valid.
 
+## Batching & context — how parallel work stays consistent (simple version)
+
+### The one rule
+
+> **All the course's knowledge lives in ONE Python dictionary. Prompts only ever get small
+> slices of it. Models only ever return labels against IDs. Python merges the labels back.**
+
+Think of it as a shared spreadsheet only Python can write to. Each LLM worker gets a printout
+of a few rows, writes sticky notes ("L7 → skill: Permutations"), and Python sticks the notes
+onto the right rows.
+
+### How batching works
+
+```
+43 objectives, batch size 30:
+  batch 1 owns L1–L30   → one LLM call
+  batch 2 owns L31–L43  → another LLM call, running AT THE SAME TIME
+```
+
+They can't clash because they own **different IDs** — like two clerks filling different pages
+of the same ledger. Whichever finishes first doesn't matter; Python merges per-ID.
+300 objectives = 10 such calls in parallel; each prompt still only ~2k tokens.
+
+### The shared header — the only context every worker gets
+
+Every LLM call, whatever it works on, starts with the same 5 lines:
+
+```
+COURSE: Test_Math | MS | Math | SKILLS_BASED_PROGRESSION
+CALENDAR: 5/wk × 36wk = 180 lesson days; 60 min/lesson; word limit 2000
+PROGRESSION: <the rules for this progression type>
+UNITS: 1. Logical Reasoning… · 2. Counting… · 3. … · 4. …    ← names only!
+THIS UNIT: Counting Combinatorics & Number Systems           (per-unit calls)
+```
+
+That `UNITS:` line is why seven parallel unit-planners produce coherent, non-clashing names
+without ever seeing each other's objectives. ~150–400 tokens — that's ALL the shared context
+any worker needs.
+
+### What is NEVER inside a prompt
+
+```
+✗ URNs                    ✗ the outline JSON        ✗ other units' objectives
+✗ word/time numbers       ✗ lesson/module numbers   ✗ totals
+```
+
+Those exist only in Python. A model can't corrupt what it can't see.
+
+### The one "whole course" call — and why it stays small
+
+Only unit-planning (`plan_parts`) sees every objective at once — as one tiny line each:
+
+```
+L1 | Logical Arguments | Intermediate        (~20 tokens per objective)
+```
+
+43 objectives ≈ 1.3k tokens. 300 ≈ 6.5k. Above 300 the rows become unique **skills** instead
+(1,000 objectives → ~70 skill rows ≈ 5.7k tokens) and Python expands each chosen skill back
+into its objective IDs. Measured live at 1,000 LOs: biggest single prompt ~6k — same as a
+small course. **Cost grows with course size; prompt size and risk don't.**
+
+Everything else that needs the whole course together — merging small units, totals, pacing —
+happens in Python *after* all the parallel calls return, where the full dictionary is free.
+
+### How order survives parallelism
+
+```
+1. Python stamps every objective's input position (idx) at the start — permanent.
+2. Models only suggest an order (a rank number per ID).
+3. Final order = one sort: (rank, lesson, idx) — idx breaks every tie, deterministically.
+4. Standards-driven mode: Python throws the model's ranks away and uses idx directly
+   (tested: even a model answering completely backwards yields exact input order).
+5. All numbering is counting loops after packing — finish order of workers is irrelevant.
+```
+
+---
+
+## Full example — input file → output file (generation)
+
+**Input** (`input.json`, abbreviated):
+
+```json
+{
+  "course_title": "Test_Math", "grade_band": "MS", "subject_area": "Math",
+  "minutes_per_lesson": 60, "lessons_per_week": 5, "course_duration_weeks": 36,
+  "course_outline_progression": "SKILLS_BASED_PROGRESSION",
+  "learning_objectives": [
+    {"learning_objective_urn": "urn:…2663de0d", "objective": "Identify logical fallacies in arguments…"},
+    {"learning_objective_urn": "urn:…265c1167", "objective": "Evaluate the validity of deductive arguments using truth tables…"},
+    … 41 more …
+  ]
+}
+```
+
+**Command:** `python -m outline generate input.json --provider claude_cli --model sonnet`
+
+**Output** (`outline.json`, abbreviated — the real run's data):
+
+```json
+{
+  "course_title": "Test_Math", "total_parts": 7, "total_chapters": 46,
+  "total_lesson_days": 180, "pacing_overrun": false, "unassigned_objective_urns": [],
+  "children": [
+    { "type": "overview",   "title": {"en": "Test_Math Course Overview"}, … },
+    { "type": "understand", "title": {"en": "Logical Reasoning And Argumentation"},
+      "children": [
+        { "type": "introduction", … },
+        { "type": "understand", "title": {"en": "Truth Tables"},
+          "chapter_estimated_word_count": 1318, "chapter_estimated_time_minutes": 52,
+          "assessment": {"type": "Quick Check", "scoring": "auto", "delivery": "multiple_choice"},
+          "children": [
+            { "type": "understand", "title": {"en": "Evaluating Argument Validity"},
+              "learning_objective_urn": "urn:…265c1167",
+              "estimated_word_count": 659, "estimated_time_minutes": 26,
+              "blooms_level": "Advanced" } ] },
+        { "type": "apply", … }, { "type": "review", … }, { "type": "test", … } ] },
+    … 3 more content units …,
+    { "type": "semester", "title": {"en": "Test_Math Semester A Reflect & Review"}, … },
+    { "type": "semester", "title": {"en": "Test_Math Semester B Reflect & Review"}, … }
+  ]
+}
+```
+
+Plus, in the same run folder: `report.json` (calls/tokens/fallbacks/validation), `analysis.md`
+(human-readable verdict + tables), `enforcement.log` (merge decisions), `input.json` (echo).
+
+---
+
+## Regeneration — every case, with input → output
+
+All cases start from a **previous run's folder** (its `input.json` + `outline.json`). Every case
+writes a NEW folder + a `regeneration.md` diff; the old folder is untouched — that's your undo.
+`--prompt` is optional everywhere; without it you get "standard" regeneration (context only).
+
+### Case 1 — FULL course, guided (with previous context + user prompt)
+
+```
+python -m outline regenerate runs\<baseline> --unit all --prompt "broader, real-world themed units"
+```
+What the model sees added to every planning prompt (built by Python from the OLD outline):
+```
+USER GUIDANCE (takes PRIORITY …): broader, real-world themed units
+REGENERATION: …keep what was good, don't repeat…
+PREVIOUS UNIT 'Logical Reasoning And Argumentation': Logical Fallacies; Valid Arguments; …
+PREVIOUS UNIT 'Counting Combinatorics & Number Systems': … (7 lessons)
+… one line per old unit (68 KB of old JSON → ~150 tokens of names)
+```
+Real output change:
+```
+Before: Logical Reasoning And Argumentation · Counting Combinatorics & Number Systems · …
+After:  Critical Thinking And Persuasion · Counting Combinatorics & Codes Ciphers ·
+        Growth Patterns & Networks Route · Elections And Fair Sharing
+```
+
+### Case 2 — FULL course, standard (context, NO prompt)
+
+```
+python -m outline regenerate runs\<baseline> --unit all
+```
+Same PREVIOUS-UNIT context, no guidance line. Real output: a fresh, valid 4-unit organisation
+("Logical Reasoning Foundations", "Number Systems And Digital Computing", …). 43/43 placed.
+
+### Case 3 — ONE unit, guided
+
+```
+python -m outline regenerate runs\<baseline> --unit 2 --prompt "make lesson names more application-focused"
+```
+Context = ONLY unit 2's old content:
+```
+PREVIOUS LESSONS: Permutations And Combinations; Multiplication And Repetition; …
+PREVIOUS MODULE TITLES: Multiplication Principle Basics; Permutations Of Distinct Objects; …
+```
+Every other unit is **locked by Python** (proven: 31/31 other modules byte-identical). Real diff:
+```
+lesson  Permutations And Combinations   → Rankings Teams And Codes
+module  Permutations Of Distinct Objects → Ranking Contest Winners
+module  Arrangements With Repetition     → Password Combination Counting
+```
+
+### Case 4 — ONE unit, standard (no prompt)
+
+```
+python -m outline regenerate runs\<baseline> --unit 2
+```
+Same unit-only context, no guidance. Valid; others locked. (Folder: `results/43LOs-regen-unit-default`.)
+
+### Case 5 — ONE lesson
+
+```
+python -m outline regenerate runs\<baseline> --unit 1 --lesson "Valid Arguments" --prompt "more applied, real-world module titles"
+```
+Context = just that lesson's old titles. ONLY its module titles change; placements, all lesson
+and unit names, and every other title stay byte-identical. Real diff:
+```
+L1 Symbolic Argument Construction → Courtroom Argument Building
+L2 Modus Ponens And Tollens       → Detective-Style Deductive Reasoning
+```
+Intro/Apply/Review/Test/Semester lessons can't be selected (they're structural, not AI-named).
+
+### Guard rails on every case
+
+```
+"buy pizza tomorrow"            → rejected: "appears unrelated to the course outline…"
+"<script>…" / "ignore previous
+ instructions"                  → rejected: "content that is not allowed…"
+--unit 99                       → error listing all units, numbered
+--lesson 99                     → error listing that unit's regenerable lessons
+regenerated unit ends < 4 lessons → Python merges it with a neighbour and reports it
+provider timeout mid-run        → deterministic fallback, outline still valid, shown in report
+```
+
+All five cases are stored with real outputs in `results/43LOs-regen-*/` — each has the exact
+prompt used and a before/after diff in its `regeneration.md`.
+
+---
+
 ## The house analogy
 
 - **LLM = architect**: "these rooms belong together; call this one 'Logical Reasoning'."
 - **Python = structural engineer**: dimensions, budgets, room numbers, building code, inspection.
 - **Final JSON = the finished house** — built by the engineer from the architect's drawings,
   never by the architect free-handing bricks.
-
-## Regeneration, in the same simple terms
-
-You point the tool at a **previous run's folder** and pick a scope:
-
-```
---unit all           regenerate the whole course.  Python compresses the OLD outline into a
-                     few lines ("PREVIOUS UNIT 'X': lesson1; lesson2; …") and puts them in
-                     every prompt: "improve this, don't repeat it."
---unit 2             regenerate ONE unit. Its old lessons+titles go in the prompt as context;
-                     every OTHER unit is locked by Python — proven byte-identical (31/31 modules).
---unit 1 --lesson 2  regenerate ONE lesson's module titles only; everything else locked.
-```
-
-Your `--prompt` ("make lesson names more application-focused") gets explicit priority over
-naming/grouping preferences — but can never override coverage, standards order, or structure.
-No prompt = standard regeneration (context only). Every regeneration writes a NEW folder with a
-`regeneration.md` before/after diff; the old folder is untouched — that's your undo.
-Real result: "Permutations Of Distinct Objects" → "Ranking Contest Winners".
-
-Bad prompts are caught by Python *before* any model call: `<script>`, "ignore previous
-instructions", or something unrelated ("buy pizza tomorrow") → clear error message, zero cost.
 
 ## Cheat sheet — who does what
 
