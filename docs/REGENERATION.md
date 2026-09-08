@@ -193,5 +193,6 @@ the primitive those workflows persist.
   CLI wiring in `outline/__main__.py`
 - Tests: `tests/graph/test_regen.py` (lock proofs, context proof, selection errors),
   `tests/unit/test_prompt_guard.py`
-- Evidence: `results/43LOs-regen-{unit,unit-default,lesson,full,full-default}-*/` each with
-  `regeneration.md` diff; commands in `docs/SETUP-AND-RUN.md` §4b
+- Evidence: `results/43LOs-regen-*` AND the same five cases at scale in `results/300LOs-regen-*`
+  (unit 1.9 min · lesson 19 s · full ~11 min at 300 LOs), each with `regeneration.md` diff;
+  commands in `docs/SETUP-AND-RUN.md` §4b

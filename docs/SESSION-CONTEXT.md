@@ -135,6 +135,20 @@ Executed via superpowers subagent-driven development: fresh implementer + review
 - Deferred minors listed in the ledger (estimates tested MS band only, uniquify mutates input, etc.).
 - `config.yaml` ships Claude model ids; `--provider openai|bedrock_converse` needs `models:` overridden.
 
+### Update 2026-09-05/08 — full evidence matrix at 300 LOs
+
+Replicated the entire 43-LO evidence set at 300 LOs, live on Sonnet, stored in `results/300LOs-*`
+(10 folders): generation for all 4 progressions (standards: **0 order inversions with skill-mode
+planning**) + user-prompt generation + all 5 regeneration cases. One incident: the original
+full-default regeneration hit an 8-minute provider blip — every call returned without structured
+output; the run still shipped a structurally valid outline on deterministic fallbacks
+(degrade-don't-fail observed live), and a clean re-run (2026-09-08, 0 fallbacks) replaced it.
+Scoped regeneration stays cheap at scale: unit 1.9 min, lesson 19 s vs full ~11 min.
+Docs added since 09-01: `SIMPLE-GUIDE.md` (all-in-one plain-language walkthrough incl. batching/
+context and all regen cases with real I/O), `REGENERATION.md`, `ARCHITECTURE-CONTEXT-AND-BATCHING.md`;
+TL-brief artifact updated with regeneration + batching/context sections. Suite: 82 passed, 1 skipped.
+GitHub: `htailor9/course-outline-generator-langraph`, branch `feature/course-regeneration` (all pushed).
+
 ## 7b. Berlin parity — challenges & limitations (assessed 2026-09-02)
 
 Rebuilding this design node-by-node inside Berlin hits structural limits: (1) no shared id-keyed
