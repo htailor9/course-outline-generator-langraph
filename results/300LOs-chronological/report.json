@@ -1,0 +1,39 @@
+{
+  "provider": "claude_cli",
+  "n_los": 300,
+  "llm_calls": 47,
+  "errors": [],
+  "prompt_tokens": 1947197,
+  "completion_tokens": 164913,
+  "max_prompt_tokens": 75330,
+  "by_node": {
+    "annotate": {
+      "calls": 10,
+      "prompt_tokens": 220453
+    },
+    "plan_chapters": {
+      "calls": 18,
+      "prompt_tokens": 847050
+    },
+    "plan_parts": {
+      "calls": 1,
+      "prompt_tokens": 71692
+    },
+    "titles": {
+      "calls": 18,
+      "prompt_tokens": 808002
+    }
+  },
+  "fallbacks": {},
+  "validation": [],
+  "enforcement_log": "MERGE: Part 'Dependent And Independent Variables' (3 chapters) merged with 'Perimeter, Area, And Volume Basics' (7 chapters)\nRESULT: Part 'Dependent Independent & Perimeter, Area,' now has 10 chapters\nFINAL: Part 'Decimal And Whole Number Operations' - 6 understand chapters OK\nFINAL: Part 'Factors And Fraction Division' - 8 understand chapters OK\nFINAL: Part 'Ratio And Rate Reasoning' - 7 understand chapters OK\nFINAL: Part 'Proportional Relationships And Percents' - 11 understand chapters OK\nFINAL: Part 'Integers And The Number Line' - 9 understand chapters OK\nFINAL: Part 'Comparing And Ordering Rational Numbers' - 10 understand chapters OK\nFINAL: Part 'Coordinate Plane And Transformations' - 10 understand chapters OK\nFINAL: Part 'Introduction To Variables And Expressions' - 7 understand chapters OK\nFINAL: Part 'Properties Of Operations And Exponents' - 17 understand chapters OK\nFINAL: Part 'One-Step Equations And Inequalities' - 9 understand chapters OK\nFINAL: Part 'Dependent Independent & Perimeter, Area,' - 10 understand chapters OK\nFINAL: Part 'Coordinate Geometry And Volume Applications' - 9 understand chapters OK\nFINAL: Part 'Statistics Fundamentals' - 8 understand chapters OK\nFINAL: Part 'Data Analysis And Displays' - 8 understand chapters OK\nFINAL: Part 'Logic And Combinatorics' - 8 understand chapters OK\nFINAL: Part 'Recursion, Graphs, And Algorithms' - 12 understand chapters OK\nFINAL: Part 'Voting And Fair Division' - 6 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 640,
+    "total_chapters": 228,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 549126,
+  "run_id": "20260905-144110_300LOs_Synthetic300-Chrono_claude_cli",
+  "started_at": "2026-09-05T14:41:10"
+}

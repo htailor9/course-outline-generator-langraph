@@ -8,4 +8,4 @@
 ## Units — before vs after
 
 - Before (4): Logical Reasoning And Argumentation; Counting Combinatorics & Number Systems; Sequences Recursive & Graph Theory; Voting Theory & Fair Division
-- After  (4): Critical Thinking And Persuasion; Counting Combinatorics & Codes Ciphers; Growth Patterns & Networks Route; Elections And Fair Sharing
+- After  (4): Critical Thinking And Persuasion; Counting Combinatorics & Codes Ciphers; Growth Patterns & Networks Route; Elections And Fair Sharingl'l

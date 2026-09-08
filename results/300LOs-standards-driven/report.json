@@ -1,0 +1,39 @@
+{
+  "provider": "claude_cli",
+  "n_los": 300,
+  "llm_calls": 47,
+  "errors": [],
+  "prompt_tokens": 1935023,
+  "completion_tokens": 129988,
+  "max_prompt_tokens": 102485,
+  "by_node": {
+    "annotate": {
+      "calls": 10,
+      "prompt_tokens": 221702
+    },
+    "plan_chapters": {
+      "calls": 18,
+      "prompt_tokens": 778052
+    },
+    "plan_parts": {
+      "calls": 1,
+      "prompt_tokens": 102485
+    },
+    "titles": {
+      "calls": 18,
+      "prompt_tokens": 832784
+    }
+  },
+  "fallbacks": {},
+  "validation": [],
+  "enforcement_log": "FINAL: Part 'Logic and Combinatorics' - 12 understand chapters OK\nFINAL: Part 'Recursive Sequences and Graph Algorithms' - 12 understand chapters OK\nFINAL: Part 'Voting and Fair Division' - 12 understand chapters OK\nFINAL: Part 'Discrete Computing Foundations' - 7 understand chapters OK\nFINAL: Part 'Ratios Rates and Number Operations' - 19 understand chapters OK\nFINAL: Part 'Rational Numbers and Coordinate Plane' - 19 understand chapters OK\nFINAL: Part 'Statistical Measures and Distributions' - 22 understand chapters OK\nFINAL: Part 'Coordinate Plane Reinforcement Practice' - 17 understand chapters OK\nFINAL: Part 'Signed Numbers and Factoring Review' - 21 understand chapters OK\nFINAL: Part 'Expressions and Exponent Rules' - 13 understand chapters OK\nFINAL: Part 'Algebraic Vocabulary and Relationships' - 23 understand chapters OK\nFINAL: Part 'Surface Area and Expression Practice' - 15 understand chapters OK\nFINAL: Part 'Equations and Variable Dependencies' - 25 understand chapters OK\nFINAL: Part 'Polygon Area and Volume Geometry' - 16 understand chapters OK\nFINAL: Part 'Ratio Tables and Unit Conversion' - 17 understand chapters OK\nFINAL: Part 'Data Displays and Statistical Summaries' - 18 understand chapters OK\nFINAL: Part 'Fraction Division and Number Line Practice' - 11 understand chapters OK\nFINAL: Part 'Signed Quantities and Rational Order' - 21 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 640,
+    "total_chapters": 377,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 419281,
+  "run_id": "20260905-142318_300LOs_Synthetic300-Standards_claude_cli",
+  "started_at": "2026-09-05T14:23:18"
+}

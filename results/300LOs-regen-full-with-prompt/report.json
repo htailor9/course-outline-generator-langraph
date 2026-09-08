@@ -1,0 +1,39 @@
+{
+  "provider": "claude_cli",
+  "n_los": 300,
+  "llm_calls": 39,
+  "errors": [],
+  "prompt_tokens": 1668663,
+  "completion_tokens": 189486,
+  "max_prompt_tokens": 60597,
+  "by_node": {
+    "annotate": {
+      "calls": 10,
+      "prompt_tokens": 244904
+    },
+    "plan_chapters": {
+      "calls": 14,
+      "prompt_tokens": 661832
+    },
+    "plan_parts": {
+      "calls": 1,
+      "prompt_tokens": 28372
+    },
+    "titles": {
+      "calls": 14,
+      "prompt_tokens": 733555
+    }
+  },
+  "fallbacks": {},
+  "validation": [],
+  "enforcement_log": "FINAL: Part 'Proportional Reasoning In Everyday Life' - 15 understand chapters OK\nFINAL: Part 'Decimals, Fractions And Factors In Practice' - 15 understand chapters OK\nFINAL: Part 'Signed Numbers In Real-World Contexts' - 9 understand chapters OK\nFINAL: Part 'Comparing And Ordering Rational Numbers' - 10 understand chapters OK\nFINAL: Part 'Mapping Points On The Coordinate Plane' - 9 understand chapters OK\nFINAL: Part 'Building Algebraic Expressions And Properties' - 15 understand chapters OK\nFINAL: Part 'Exponents And Evaluating Formulas' - 9 understand chapters OK\nFINAL: Part 'Modeling Equations And Relationships' - 12 understand chapters OK\nFINAL: Part 'Area And Design On Grid Maps' - 8 understand chapters OK\nFINAL: Part 'Volume And Surface Area In Construction' - 7 understand chapters OK\nFINAL: Part 'Statistical Questions And Center Summaries' - 10 understand chapters OK\nFINAL: Part 'Interpreting Graphs And Data Distributions' - 10 understand chapters OK\nFINAL: Part 'Logical Reasoning, Patterns And Counting' - 9 understand chapters OK\nFINAL: Part 'Networks, Elections And Information Systems' - 16 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 640,
+    "total_chapters": 215,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 663988,
+  "run_id": "20260905-150527_300LOs_Synthetic-300-regen-full_claude_cli",
+  "started_at": "2026-09-05T15:05:27"
+}

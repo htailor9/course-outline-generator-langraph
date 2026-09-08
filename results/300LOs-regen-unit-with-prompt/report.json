@@ -1,0 +1,31 @@
+{
+  "provider": "claude_cli",
+  "n_los": 300,
+  "llm_calls": 3,
+  "errors": [],
+  "prompt_tokens": 140929,
+  "completion_tokens": 9356,
+  "max_prompt_tokens": 49868,
+  "by_node": {
+    "plan_chapters": {
+      "calls": 1,
+      "prompt_tokens": 49868
+    },
+    "titles": {
+      "calls": 2,
+      "prompt_tokens": 91061
+    }
+  },
+  "fallbacks": {},
+  "validation": [],
+  "enforcement_log": "FINAL: Part 'Ratios Rates And Percents' - 15 understand chapters OK\nFINAL: Part 'Fraction And Whole Number Division' - 7 understand chapters OK\nFINAL: Part 'Decimals Factors And Multiples' - 8 understand chapters OK\nFINAL: Part 'Integers And Signed Numbers' - 8 understand chapters OK\nFINAL: Part 'Absolute Value And Number Comparison' - 10 understand chapters OK\nFINAL: Part 'The Cartesian Plane' - 10 understand chapters OK\nFINAL: Part 'Statistical Questions And Center Measures' - 9 understand chapters OK\nFINAL: Part 'Data Distribution And Summary' - 10 understand chapters OK\nFINAL: Part 'Algebraic Terms And Evaluation' - 8 understand chapters OK\nFINAL: Part 'Exponents And Equivalent Expressions' - 12 understand chapters OK\nFINAL: Part 'Equations Inequalities And Relationships' - 17 understand chapters OK\nFINAL: Part 'Coordinate Geometry And Area' - 9 understand chapters OK\nFINAL: Part 'Volume And Surface Area' - 8 understand chapters OK\nFINAL: Part 'Logical Reasoning And Argumentation' - 4 understand chapters OK\nFINAL: Part 'Counting Combinatorics & Sequences Recursion' - 6 understand chapters OK\nFINAL: Part 'Graph Theory & Voting Apportionment' - 7 understand chapters OK\nFINAL: Part 'Equitable Resource Allocation' - 4 understand chapters OK\nFINAL: Part 'Number Systems And Information Theory' - 4 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 640,
+    "total_chapters": 233,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 108874,
+  "run_id": "20260905-145240_300LOs_Synthetic-300-regen-Fraction-And-Whole-N_claude_cli",
+  "started_at": "2026-09-05T14:52:40"
+}

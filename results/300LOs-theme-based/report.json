@@ -1,0 +1,39 @@
+{
+  "provider": "claude_cli",
+  "n_los": 300,
+  "llm_calls": 31,
+  "errors": [],
+  "prompt_tokens": 1131855,
+  "completion_tokens": 167570,
+  "max_prompt_tokens": 72550,
+  "by_node": {
+    "annotate": {
+      "calls": 10,
+      "prompt_tokens": 218694
+    },
+    "plan_chapters": {
+      "calls": 10,
+      "prompt_tokens": 379012
+    },
+    "plan_parts": {
+      "calls": 1,
+      "prompt_tokens": 72550
+    },
+    "titles": {
+      "calls": 10,
+      "prompt_tokens": 461599
+    }
+  },
+  "fallbacks": {},
+  "validation": [],
+  "enforcement_log": "FINAL: Part 'Ratios, Rates, and Proportions' - 17 understand chapters OK\nFINAL: Part 'Fraction, Decimal, and Factor Operations' - 14 understand chapters OK\nFINAL: Part 'Statistical Questions and Data Analysis' - 19 understand chapters OK\nFINAL: Part 'Rational Numbers and Absolute Value' - 19 understand chapters OK\nFINAL: Part 'Graphing on the Coordinate Plane' - 10 understand chapters OK\nFINAL: Part 'Algebraic Expressions and Properties' - 23 understand chapters OK\nFINAL: Part 'Equations, Inequalities, and Variables' - 16 understand chapters OK\nFINAL: Part 'Geometric Measurement and Surface Area' - 16 understand chapters OK\nFINAL: Part 'Logic, Proof, and Combinatorics' - 11 understand chapters OK\nFINAL: Part 'Networks, Social Choice, and Computation' - 13 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 640,
+    "total_chapters": 203,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 515294,
+  "run_id": "20260905-143156_300LOs_Synthetic300-Theme_claude_cli",
+  "started_at": "2026-09-05T14:31:56"
+}

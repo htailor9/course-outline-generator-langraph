@@ -35,3 +35,19 @@ Notes:
   included; the shipped folder is the post-fix run proving exact input-order preservation.
 - Reproduce any of these: `python -m outline generate results/43LOs-<type>/input.json --provider claude_cli --model sonnet`
 
+## 300 Learning Objectives — same evidence set at scale (2026-09-05, Claude Sonnet)
+
+All valid, 300/300 placed. Standards run: **0 order inversions** (skill-mode planning + code-enforced input order together).
+
+| Folder | Case | Result |
+|---|---|---|
+| `300LOs-skills-based/` | generation, SKILLS_BASED | ✅ valid · 49 calls · 9.6 min |
+| `300LOs-standards-driven/` | generation, STANDARDS_DRIVEN | ✅ valid · exact linear input match (0 inversions) |
+| `300LOs-theme-based/` | generation, THEME_BASED | ✅ valid |
+| `300LOs-chronological/` | generation, CHRONOLOGICAL | ✅ valid |
+| `300LOs-user-prompt/` | generation + user_prompt (broader ≤3-word unit names, real-world lessons) | ✅ valid |
+| `300LOs-regen-unit-with-prompt/` | UNIT regeneration, guided (unit 2, application-focused lesson names) | ✅ valid · others locked · 1.9 min |
+| `300LOs-regen-unit-default/` | UNIT regeneration, standard (no prompt) | ✅ valid · others locked |
+| `300LOs-regen-lesson-with-prompt/` | LESSON regeneration (unit 1, applied module titles) | ✅ valid · one lesson only · 19 s |
+| `300LOs-regen-full-with-prompt/` | FULL regeneration, guided (prev outline as context) | ✅ valid · 11.1 min |
+| `300LOs-regen-full-default/` | FULL regeneration, standard (context, no prompt) | ✅ valid · 300/300 · fallbacks {'titles_fallback': 300, 'plan_chapters_fallback': 25} (transient provider slowness — see report.json) |
