@@ -159,6 +159,9 @@ second using words from its own content: skill words first ("Fractions - Denomin
 words from the objective text itself ("Fractions - Multiply Whole"). A numeric suffix can only
 occur for objectives that are literally word-for-word identical — where nothing could
 distinguish them. Same scheme for unit names; module titles get an LLM re-ask instead.
+(The requirement — STUDIOPE-446, `course_outline_requirements.md` §2.6 — allows descriptors
+*or* numeric suffixes like "Order Of Operations Mastery (2)"; we use only descriptors in
+practice, which is stricter than the spec.)
 
 ## 6. Titles — LLM writes the names, Python checks them
 
