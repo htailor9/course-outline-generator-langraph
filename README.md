@@ -49,6 +49,16 @@ clear message before any model call.
 - `openai` / `bedrock_converse` — set that provider's model ids in `config.yaml` `models:`, e.g.
   `{default: gpt-4o, annotate: gpt-4o-mini, titles: gpt-4o-mini}`
 
+## REST API
+
+Same pipeline over HTTP (CLI unchanged): `pip install -e ".[api]"` then
+`uvicorn outline.api:app --port 8000` — Swagger at `/docs`. Async job model: every POST returns
+`202 {run_id}` instantly; poll `GET /v1/outline/runs/{run_id}`, fetch `/outline` `/report`
+`/analysis` `/regeneration`. `POST /v1/outline/generate` takes the normal input JSON;
+`POST /v1/outline/regenerate` takes `{baseline_run_id, unit: "all"|N, lesson?, prompt?}` — the
+server rebuilds previous-outline context itself. Bad prompts → 400 before any model call.
+Details: [docs/SETUP-AND-RUN.md](docs/SETUP-AND-RUN.md) §4c.
+
 ## Guarantees (code-enforced, test-covered)
 
 - Every input LO URN appears exactly once in the output (`unassigned_objective_urns: []`)

@@ -150,6 +150,23 @@ context and all regen cases with real I/O), `REGENERATION.md`, `ARCHITECTURE-CON
 TL-brief artifact updated with regeneration + batching/context sections. Suite: 82 passed, 1 skipped.
 GitHub: `htailor9/course-outline-generator-langraph`, branch `feature/course-regeneration` (all pushed).
 
+### Update 2026-09-08 — REST API (branch `feature/rest-api`)
+
+FastAPI layer over the same pipeline; CLI byte-identical (its orchestration moved to a shared
+`outline/service.py` that both transports call). `outline/jobs.py` = in-memory registry running
+jobs on a dedicated background event-loop thread (request-loop tasks got cancelled under the
+ASGI test transport — CancelledError — hence the owned thread; also uvicorn-robust).
+Endpoints (`outline/api.py`, Swagger at `/docs` with full descriptions/examples):
+POST `/v1/outline/generate` and `/v1/outline/regenerate` → `202 {run_id}`;
+GET `/v1/outline/runs[/{id}[/outline|report|analysis|regeneration|enforcement|input]]`, `/healthz`.
+Guard → 400 pre-queue; unknown baseline → 404; bad selection → job `failed` with the CLI's
+message; run_id regex + strict path resolution (traversal test). `run_id` = run folder →
+completed runs survive restarts; regen jobs use a ticket id (folder named by scope later),
+registry maps ticket → run_dir. Deps in `[api]` extra. Tests: +17 (service 5, jobs 3, api 9);
+suite **~100 passed** offline; real uvicorn smoke: /docs + /openapi.json 200, full fake
+generate→poll→outline→regenerate cycle over HTTP. MVP limits documented in SETUP-AND-RUN §4c
+(single worker, no auth, no streaming). Plan: `docs/superpowers/plans/2026-09-08-rest-api.md`.
+
 ## 7b. Berlin parity — challenges & limitations (assessed 2026-09-02)
 
 Rebuilding this design node-by-node inside Berlin hits structural limits: (1) no shared id-keyed

@@ -170,6 +170,44 @@ The regenerated course re-flows through pack/merge/assemble/validate, so all gua
 (100 % coverage, min-4, unique names, numbering) hold; if the regenerated unit ends up under
 4 lessons it may merge with a neighbour — reported in `enforcement.log`/`regeneration.md`.
 
+## 4c. REST API (async jobs + Swagger)
+
+The CLI is unchanged; the API is an additional transport over the same service layer.
+
+```powershell
+pip install -e ".[api]"
+$env:OUTLINE_RUNS_DIR = "runs"          # optional (default: runs)
+uvicorn outline.api:app --port 8000     # single worker (in-memory job registry)
+```
+
+Swagger UI: **http://localhost:8000/docs** · OpenAPI: `/openapi.json` · health: `/healthz`
+
+Every POST is async: it returns `202 {"run_id": …}` immediately; poll, then fetch artifacts.
+
+```bash
+# generate (body = the normal input JSON + optional provider/model; "fake" = offline)
+curl -X POST localhost:8000/v1/outline/generate -H "Content-Type: application/json" \
+     -d @tests/fixtures/sample-input-43.json          # add "provider":"claude_cli","model":"sonnet"
+
+# poll → done/failed (+ report), then fetch
+curl localhost:8000/v1/outline/runs/<run_id>
+curl localhost:8000/v1/outline/runs/<run_id>/outline      # also: /report /analysis /enforcement /input
+curl localhost:8000/v1/outline/runs                       # list all runs + live jobs
+
+# regenerate: client sends id + scope + optional prompt — the server rebuilds the
+# previous-outline context itself and gives the prompt priority (same engine as the CLI)
+curl -X POST localhost:8000/v1/outline/regenerate -H "Content-Type: application/json" \
+     -d '{"baseline_run_id":"<run_id>","unit":"2","prompt":"application-focused lesson names"}'
+#    {"unit":"all"} = full course · {"unit":"1","lesson":"2"} = one lesson's titles
+curl localhost:8000/v1/outline/runs/<regen_run_id>/regeneration   # before/after diff
+```
+
+Error behaviour: invalid/unrelated `user_prompt`/`prompt` → **400** with the guard's message
+(nothing queued, no model cost); unknown baseline → **404**; bad unit/lesson selection → job
+`failed` with the numbered-options message; `run_id` is validated (no path traversal).
+MVP limits: in-memory job status (single worker; completed runs survive restarts because the
+run folder is the persistence), no auth, no streaming — future work alongside Berlin integration.
+
 ## 5. Tests
 
 ```powershell
