@@ -1,144 +1,39 @@
 {
   "provider": "claude_cli",
   "n_los": 300,
-  "llm_calls": 26,
-  "errors": [
-    {
-      "node": "plan_chapters",
-      "part": "P16",
-      "error": "structured output failed for ChaptersOut: success"
-    },
-    {
-      "node": "plan_chapters",
-      "part": "P17",
-      "error": "structured output failed for ChaptersOut: success"
-    },
-    {
-      "node": "plan_chapters",
-      "part": "P18",
-      "error": "structured output failed for ChaptersOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 2,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 3,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 4,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 5,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 6,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 7,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 8,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 9,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 10,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 11,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 12,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 13,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 14,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 15,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 16,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 17,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 18,
-      "error": "structured output failed for TitlesOut: success"
-    },
-    {
-      "node": "titles",
-      "part": 19,
-      "error": "structured output failed for TitlesOut: success"
-    }
-  ],
-  "prompt_tokens": 1032812,
-  "completion_tokens": 131677,
-  "max_prompt_tokens": 79732,
+  "llm_calls": 47,
+  "errors": [],
+  "prompt_tokens": 1701106,
+  "completion_tokens": 171921,
+  "max_prompt_tokens": 63707,
   "by_node": {
     "annotate": {
       "calls": 10,
-      "prompt_tokens": 244024
+      "prompt_tokens": 185305
     },
     "plan_chapters": {
-      "calls": 15,
-      "prompt_tokens": 719082
+      "calls": 19,
+      "prompt_tokens": 773981
     },
     "plan_parts": {
       "calls": 1,
-      "prompt_tokens": 69706
+      "prompt_tokens": 63707
+    },
+    "titles": {
+      "calls": 17,
+      "prompt_tokens": 678113
     }
   },
-  "fallbacks": {
-    "titles_fallback": 300,
-    "plan_chapters_fallback": 25
-  },
+  "fallbacks": {},
   "validation": [],
-  "enforcement_log": "FINAL: Part 'Ratios Rates And Percents' - 15 understand chapters OK\nFINAL: Part 'Fraction And Whole Number Division' - 7 understand chapters OK\nFINAL: Part 'Decimals Factors And Multiples' - 8 understand chapters OK\nFINAL: Part 'Integers And Signed Numbers' - 9 understand chapters OK\nFINAL: Part 'Absolute Value And Number Comparison' - 10 understand chapters OK\nFINAL: Part 'The Cartesian Plane' - 11 understand chapters OK\nFINAL: Part 'Statistical Questions And Center Measures' - 10 understand chapters OK\nFINAL: Part 'Data Distribution And Summary' - 9 understand chapters OK\nFINAL: Part 'Algebraic Terms And Evaluation' - 7 understand chapters OK\nFINAL: Part 'Exponents And Equivalent Expressions' - 13 understand chapters OK\nFINAL: Part 'Equations Inequalities And Relationships' - 15 understand chapters OK\nFINAL: Part 'Coordinate Geometry And Area' - 7 understand chapters OK\nFINAL: Part 'Volume And Surface Area' - 10 understand chapters OK\nFINAL: Part 'Logical Reasoning And Argumentation' - 4 understand chapters OK\nFINAL: Part 'Counting Combinatorics And Recursive Sequences' - 6 understand chapters OK\nFINAL: Part 'Graph Theory Voting And Apportionment' - 11 understand chapters OK\nFINAL: Part 'Equitable Resource Allocation' - 6 understand chapters OK\nFINAL: Part 'Number Systems And Information Theory' - 7 understand chapters OK",
+  "enforcement_log": "MERGE: Part 'Graph Theory And Network Algorithms' (3 chapters) merged with 'Voting And Apportionment Methods' (3 chapters)\nRESULT: Part 'Graph Theory & Voting Apportionment' now has 6 chapters\nMERGE: Part 'Equitable Resource Allocation' (3 chapters) merged with 'Number Systems And Information Theory' (5 chapters)\nRESULT: Part 'Equitable Resource & Number Systems' now has 8 chapters\nFINAL: Part 'Ratios Rates And Percents' - 18 understand chapters OK\nFINAL: Part 'Fraction And Whole Number Division' - 7 understand chapters OK\nFINAL: Part 'Decimals Factors And Multiples' - 8 understand chapters OK\nFINAL: Part 'Integers And Signed Numbers' - 9 understand chapters OK\nFINAL: Part 'Absolute Value And Rational Comparison' - 10 understand chapters OK\nFINAL: Part 'The Cartesian Plane' - 10 understand chapters OK\nFINAL: Part 'Statistical Questions And Measures Of Center' - 9 understand chapters OK\nFINAL: Part 'Analyzing Data Distributions' - 9 understand chapters OK\nFINAL: Part 'Algebraic Expressions And Evaluation' - 9 understand chapters OK\nFINAL: Part 'Properties And Exponent Rules' - 15 understand chapters OK\nFINAL: Part 'Solving Equations And Inequalities' - 13 understand chapters OK\nFINAL: Part 'Coordinate Distance And Composite Regions' - 8 understand chapters OK\nFINAL: Part 'Volume And Surface Area' - 7 understand chapters OK\nFINAL: Part 'Logical Reasoning And Argumentation' - 4 understand chapters OK\nFINAL: Part 'Counting Combinatorics And Recursive Sequences' - 6 understand chapters OK\nFINAL: Part 'Graph Theory & Voting Apportionment' - 6 understand chapters OK\nFINAL: Part 'Equitable Resource & Number Systems' - 8 understand chapters OK",
   "pacing": {
     "total_lesson_days": 640,
-    "total_chapters": 242,
+    "total_chapters": 229,
     "pacing_overrun": false,
     "pacing_overrun_lesson_days": null
   },
-  "wall_ms": 466917,
-  "run_id": "20260905-151319_300LOs_Synthetic-300-regen-full_claude_cli",
-  "started_at": "2026-09-05T15:13:19"
+  "wall_ms": 578145,
+  "run_id": "20260908-111618_300LOs_Synthetic-300-regen-full_claude_cli",
+  "started_at": "2026-09-08T11:16:18"
 }

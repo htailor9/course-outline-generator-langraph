@@ -50,4 +50,4 @@ All valid, 300/300 placed. Standards run: **0 order inversions** (skill-mode pla
 | `300LOs-regen-unit-default/` | UNIT regeneration, standard (no prompt) | ✅ valid · others locked |
 | `300LOs-regen-lesson-with-prompt/` | LESSON regeneration (unit 1, applied module titles) | ✅ valid · one lesson only · 19 s |
 | `300LOs-regen-full-with-prompt/` | FULL regeneration, guided (prev outline as context) | ✅ valid · 11.1 min |
-| `300LOs-regen-full-default/` | FULL regeneration, standard (context, no prompt) | ✅ valid · 300/300 · fallbacks {'titles_fallback': 300, 'plan_chapters_fallback': 25} (transient provider slowness — see report.json) |
+| `300LOs-regen-full-default/` | FULL regeneration, standard (context, no prompt; re-run 2026-09-08 after a transient provider blip) | ✅ valid · 300/300 · 0 fallbacks |
