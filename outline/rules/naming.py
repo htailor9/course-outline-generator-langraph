@@ -97,17 +97,30 @@ def merge_part_names(first: str, second: str) -> str:
 
 
 def _differentiator(chapter_los: list[dict], base_name: str) -> str:
+    """Find up to two meaningful words that distinguish this item from its namesake.
+
+    Search order: primary-skill words first, then the objective text itself — so a numeric
+    suffix can only ever occur for objectives that are literally word-for-word identical.
+    """
     base = {w.lower() for w in base_name.split()}
     novel: list[str] = []
-    for lo in chapter_los:
-        for word in (lo.get("primary_skill") or "").split():
+
+    def collect(text: str) -> None:
+        for word in (text or "").split():
             clean = word.strip(".,;:()")
             if (
-                clean.lower() not in base
+                len(clean) > 2
+                and clean.lower() not in base
                 and clean.lower() not in STOP_WORDS
                 and clean.title() not in novel
             ):
                 novel.append(clean.title())
+
+    for lo in chapter_los:
+        collect(lo.get("primary_skill"))
+    if not novel:  # fall back to the objectives' own wording
+        for lo in chapter_los:
+            collect(lo.get("lo_text") or lo.get("objective") or lo.get("text"))
     return " ".join(novel[:2])
 
 

@@ -154,8 +154,11 @@ RESULT: 'Counting Combinatorics & Number Systems' now has 7 lessons
 Intro), modules from 1. Counting loops, not a model — the old system's broken numbering
 (`[11, 2, 3…]`) is impossible here.
 
-**Duplicate names** — if two lessons in a unit end up with the same name, Python makes them
-specific ("Fractions - Denominators"), numeric suffix only as a last resort. Same for unit names.
+**Duplicate names** — if two lessons in a unit end up with the same name, Python renames the
+second using words from its own content: skill words first ("Fractions - Denominators"), then
+words from the objective text itself ("Fractions - Multiply Whole"). A numeric suffix can only
+occur for objectives that are literally word-for-word identical — where nothing could
+distinguish them. Same scheme for unit names; module titles get an LLM re-ask instead.
 
 ## 6. Titles — LLM writes the names, Python checks them
 

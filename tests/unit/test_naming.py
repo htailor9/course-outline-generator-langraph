@@ -44,3 +44,33 @@ def test_uniquify_uses_skill_differentiator():
     assert names[0] == "Fractions"
     assert names[1].startswith("Fractions - ") and "Denominators" in names[1]
     assert len(set(names)) == 3
+
+
+def test_differentiator_falls_back_to_objective_text_before_numbers():
+    # Same base name AND same skill words — but different objective texts:
+    # the rename must come from the text, not a numeric suffix.
+    chapters = [
+        {
+            "chapter_name": "Fractions",
+            "learning_objectives": [
+                {
+                    "primary_skill": "Fractions",
+                    "lo_text": "Add fractions with unlike denominators",
+                }
+            ],
+        },
+        {
+            "chapter_name": "Fractions",
+            "learning_objectives": [
+                {
+                    "primary_skill": "Fractions",
+                    "lo_text": "Multiply fractions by whole numbers",
+                }
+            ],
+        },
+    ]
+    out = uniquify_chapter_names(chapters)
+    names = [c["chapter_name"] for c in out]
+    assert names[0] == "Fractions"
+    assert "(" not in names[1] and names[1] != "Fractions", names
+    assert any(w in names[1] for w in ("Multiply", "Whole", "Numbers")), names
