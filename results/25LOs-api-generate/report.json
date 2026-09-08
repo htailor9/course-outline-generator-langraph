@@ -1,0 +1,39 @@
+{
+  "provider": "claude_cli",
+  "n_los": 25,
+  "llm_calls": 10,
+  "errors": [],
+  "prompt_tokens": 334624,
+  "completion_tokens": 16020,
+  "max_prompt_tokens": 51909,
+  "by_node": {
+    "annotate": {
+      "calls": 1,
+      "prompt_tokens": 15283
+    },
+    "plan_chapters": {
+      "calls": 5,
+      "prompt_tokens": 186448
+    },
+    "plan_parts": {
+      "calls": 1,
+      "prompt_tokens": 34495
+    },
+    "titles": {
+      "calls": 3,
+      "prompt_tokens": 98398
+    }
+  },
+  "fallbacks": {},
+  "validation": [],
+  "enforcement_log": "MERGE: Part 'Combinatorics And Counting Methods' (3 chapters) merged with 'Voting Power Indices' (1 chapters)\nRESULT: Part 'Combinatorics Counting & Voting Power' now has 4 chapters\nMERGE: Part 'Recursive Sequences And Patterns' (3 chapters) merged with 'Graph Algorithms And Optimization' (3 chapters)\nRESULT: Part 'Recursive Sequences & Graph Algorithms' now has 6 chapters\nFINAL: Part 'Logical Reasoning And Argumentation' - 4 understand chapters OK\nFINAL: Part 'Combinatorics Counting & Voting Power' - 4 understand chapters OK\nFINAL: Part 'Recursive Sequences & Graph Algorithms' - 6 understand chapters OK",
+  "pacing": {
+    "total_lesson_days": 180,
+    "total_chapters": 31,
+    "pacing_overrun": false,
+    "pacing_overrun_lesson_days": null
+  },
+  "wall_ms": 102602,
+  "run_id": "20260908-151422_25LOs_Test-Math-25_claude_cli",
+  "started_at": "2026-09-08T15:16:05"
+}

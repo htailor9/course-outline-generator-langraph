@@ -51,3 +51,14 @@ All valid, 300/300 placed. Standards run: **0 order inversions** (skill-mode pla
 | `300LOs-regen-lesson-with-prompt/` | LESSON regeneration (unit 1, applied module titles) | ✅ valid · one lesson only · 19 s |
 | `300LOs-regen-full-with-prompt/` | FULL regeneration, guided (prev outline as context) | ✅ valid · 11.1 min |
 | `300LOs-regen-full-default/` | FULL regeneration, standard (context, no prompt; re-run 2026-09-08 after a transient provider blip) | ✅ valid · 300/300 · 0 fallbacks |
+
+## 25 Learning Objectives — REST API live test (2026-09-08, Claude Sonnet via HTTP)
+
+Both runs executed end-to-end through the FastAPI endpoints (`POST /v1/outline/generate`,
+`POST /v1/outline/regenerate`, polled by `run_id`, artifacts fetched over HTTP).
+
+| Folder | Case | Result |
+|---|---|---|
+| `25LOs-api-generate/` | API generation (claude_cli · sonnet) | ✅ done in 103 s · validation [] · 0 fallbacks · 10 calls · 3 units |
+| `25LOs-api-regen-unit/` | API unit regeneration (unit 1, prompt: application-focused lesson names) | ✅ done in 43 s · validation [] · 5/6 module titles changed · baseline untouched |
+

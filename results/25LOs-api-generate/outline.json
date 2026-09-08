@@ -1,0 +1,1080 @@
+{
+  "course_title": "Test_Math_25",
+  "grade_band": "MS",
+  "subject_area": "Math",
+  "chapter_word_count_limit": 2000,
+  "total_parts": 6,
+  "total_chapters": 31,
+  "title": {
+    "en": "Test_Math_25"
+  },
+  "label": "project",
+  "children": [
+    {
+      "label": "part",
+      "type": "overview",
+      "part_number": 1,
+      "title": {
+        "en": "Test_Math_25 Course Overview"
+      },
+      "children": [
+        {
+          "label": "chapter",
+          "type": "overview",
+          "chapter_number": 1,
+          "title": {
+            "en": "Test_Math_25 Course Overview"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "course_guide",
+              "module_number": 1,
+              "title": {
+                "en": "Course Guide"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            },
+            {
+              "label": "module",
+              "type": "overview_introduction",
+              "module_number": 2,
+              "title": {
+                "en": "Course Introduction"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "part",
+      "type": "understand",
+      "part_number": 2,
+      "title": {
+        "en": "Logical Reasoning And Argumentation"
+      },
+      "children": [
+        {
+          "label": "chapter",
+          "type": "introduction",
+          "chapter_number": 1,
+          "title": {
+            "en": "Logical Reasoning And Argumentation Introduction"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "introduction",
+              "module_number": 1,
+              "title": {
+                "en": "Logical Reasoning And Argumentation Introduction"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ]
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 2,
+          "title": {
+            "en": "Logical Fallacies"
+          },
+          "chapter_estimated_word_count": 291,
+          "chapter_estimated_time_minutes": 14,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Identifying Common Fallacies"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:2663de0d-9dd8-4da8-8b10-a60e27b8ee17",
+              "estimated_word_count": 291,
+              "estimated_time_minutes": 14,
+              "primary_skill": "Logical Fallacies",
+              "blooms_level": "Foundational"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 3,
+          "title": {
+            "en": "Argument Construction"
+          },
+          "chapter_estimated_word_count": 950,
+          "chapter_estimated_time_minutes": 36,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Symbolic Argument Construction"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:36612654-3315-4403-9170-f4acf4a05604",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Logical Argument Construction",
+              "blooms_level": "Intermediate"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 2,
+              "title": {
+                "en": "Applying Rules Of Inference"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:047dedb2-9092-4fc6-a2d7-070c5bb5d241",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Rules Of Inference",
+              "blooms_level": "Intermediate"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 4,
+          "title": {
+            "en": "Quantifiers And Counterexamples"
+          },
+          "chapter_estimated_word_count": 950,
+          "chapter_estimated_time_minutes": 36,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Using Mathematical Quantifiers"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:f848e6ad-10b5-45a3-aa33-75b0e7f683ec",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Quantifiers",
+              "blooms_level": "Intermediate"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 2,
+              "title": {
+                "en": "Disproving Claims With Counterexamples"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:dece7cc4-3649-491f-9dae-f76868b17803",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Counterexamples",
+              "blooms_level": "Intermediate"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 5,
+          "title": {
+            "en": "Deductive Argument Validity"
+          },
+          "chapter_estimated_word_count": 659,
+          "chapter_estimated_time_minutes": 26,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Truth Tables For Validity"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:265c1167-4a37-4a95-988f-fb786edbbb07",
+              "estimated_word_count": 659,
+              "estimated_time_minutes": 26,
+              "primary_skill": "Deductive Argument Validity",
+              "blooms_level": "Advanced"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "apply",
+          "chapter_number": 6,
+          "title": {
+            "en": "Logical Reasoning And Argumentation Apply"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "apply",
+              "module_number": 1,
+              "title": {
+                "en": "Apply"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ],
+          "assessment": {
+            "type": "Sample Work",
+            "scoring": "teacher",
+            "delivery": "dropbox"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "review",
+          "chapter_number": 7,
+          "title": {
+            "en": "Logical Reasoning And Argumentation Review"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "review",
+              "module_number": 1,
+              "title": {
+                "en": "Review"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ],
+          "assessment": {
+            "type": "Unit Online Practice",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "test",
+          "chapter_number": 8,
+          "title": {
+            "en": "Logical Reasoning And Argumentation Part Test"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [],
+          "assessment": {
+            "type": "Unit Test",
+            "scoring": "auto_and_teacher",
+            "delivery": "test"
+          }
+        }
+      ]
+    },
+    {
+      "label": "part",
+      "type": "understand",
+      "part_number": 3,
+      "title": {
+        "en": "Combinatorics Counting & Voting Power"
+      },
+      "children": [
+        {
+          "label": "chapter",
+          "type": "introduction",
+          "chapter_number": 1,
+          "title": {
+            "en": "Combinatorics Counting & Voting Power Introduction"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "introduction",
+              "module_number": 1,
+              "title": {
+                "en": "Combinatorics Counting & Voting Power Introduction"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ]
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 2,
+          "title": {
+            "en": "Permutations And Combinations"
+          },
+          "chapter_estimated_word_count": 582,
+          "chapter_estimated_time_minutes": 28,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Ordered Arrangements With Permutations"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:b1c4b83d-18e9-4d4f-b771-8c86079a21b9",
+              "estimated_word_count": 291,
+              "estimated_time_minutes": 14,
+              "primary_skill": "Permutations",
+              "blooms_level": "Foundational"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 2,
+              "title": {
+                "en": "Unordered Selections With Combinations"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:c23f33be-4e8a-41e2-8d82-ad32a45dd334",
+              "estimated_word_count": 291,
+              "estimated_time_minutes": 14,
+              "primary_skill": "Combinations",
+              "blooms_level": "Foundational"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 3,
+          "title": {
+            "en": "Applied Counting Techniques"
+          },
+          "chapter_estimated_word_count": 1425,
+          "chapter_estimated_time_minutes": 54,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Multiplication Principle For Outcomes"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:a271a145-134a-419b-bfcd-60bafb51f2cf",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Multiplication Principle",
+              "blooms_level": "Intermediate"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 2,
+              "title": {
+                "en": "Arrangements With Repetition"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:82a6dc89-a87f-4a7a-94fc-051f745dd588",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Counting With Repetition",
+              "blooms_level": "Intermediate"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 3,
+              "title": {
+                "en": "Inclusion-Exclusion For Set Counting"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:6b148b7d-16ee-4c6f-b4c6-304de1c78e8f",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Inclusion-Exclusion Principle",
+              "blooms_level": "Intermediate"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 4,
+          "title": {
+            "en": "Applied Counting Techniques - Technique Selection"
+          },
+          "chapter_estimated_word_count": 475,
+          "chapter_estimated_time_minutes": 18,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Choosing The Right Counting Method"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:6133fcf8-74b5-4201-801a-eb676fdcd5ac",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Counting Technique Selection",
+              "blooms_level": "Intermediate"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 5,
+          "title": {
+            "en": "Banzhaf Power Index"
+          },
+          "chapter_estimated_word_count": 291,
+          "chapter_estimated_time_minutes": 14,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Weighted Voting Power Calculations"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:3b6ac287-7ec2-414d-9a89-16a994b4ce80",
+              "estimated_word_count": 291,
+              "estimated_time_minutes": 14,
+              "primary_skill": "Voting Power Indices",
+              "blooms_level": "Foundational"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "apply",
+          "chapter_number": 6,
+          "title": {
+            "en": "Combinatorics Counting & Voting Power Apply"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "apply",
+              "module_number": 1,
+              "title": {
+                "en": "Apply"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ],
+          "assessment": {
+            "type": "Sample Work",
+            "scoring": "teacher",
+            "delivery": "dropbox"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "review",
+          "chapter_number": 7,
+          "title": {
+            "en": "Combinatorics Counting & Voting Power Review"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "review",
+              "module_number": 1,
+              "title": {
+                "en": "Review"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ],
+          "assessment": {
+            "type": "Unit Online Practice",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "test",
+          "chapter_number": 8,
+          "title": {
+            "en": "Combinatorics Counting & Voting Power Part Test"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [],
+          "assessment": {
+            "type": "Unit Test",
+            "scoring": "auto_and_teacher",
+            "delivery": "test"
+          }
+        }
+      ]
+    },
+    {
+      "label": "part",
+      "type": "understand",
+      "part_number": 4,
+      "title": {
+        "en": "Recursive Sequences & Graph Algorithms"
+      },
+      "children": [
+        {
+          "label": "chapter",
+          "type": "introduction",
+          "chapter_number": 1,
+          "title": {
+            "en": "Recursive Sequences & Graph Algorithms Introduction"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "introduction",
+              "module_number": 1,
+              "title": {
+                "en": "Recursive Sequences & Graph Algorithms Introduction"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ]
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 2,
+          "title": {
+            "en": "Recursive Sequence Basics"
+          },
+          "chapter_estimated_word_count": 582,
+          "chapter_estimated_time_minutes": 28,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Defining Recursive Sequences"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:2eb7e9fb-9821-468d-a3d9-95becbf4ca77",
+              "estimated_word_count": 291,
+              "estimated_time_minutes": 14,
+              "primary_skill": "Recursive Sequences",
+              "blooms_level": "Foundational"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 2,
+              "title": {
+                "en": "Arithmetic And Geometric Terms"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:68a3932b-0e09-4a02-a040-07a3afa84dab",
+              "estimated_word_count": 291,
+              "estimated_time_minutes": 14,
+              "primary_skill": "Recursive Sequences",
+              "blooms_level": "Foundational"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 3,
+          "title": {
+            "en": "Fibonacci And Algorithmic Recursion"
+          },
+          "chapter_estimated_word_count": 950,
+          "chapter_estimated_time_minutes": 36,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Fibonacci Modeling"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:1fc80674-3bab-48a2-ac5a-229aede60838",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Fibonacci Sequence",
+              "blooms_level": "Intermediate"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 2,
+              "title": {
+                "en": "Recursive Factorial Algorithms"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:ac6dda12-50c0-4b4c-a31d-8ace5f8e360d",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Recursive Algorithms",
+              "blooms_level": "Intermediate"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 4,
+          "title": {
+            "en": "Sequence Convergence And Modeling"
+          },
+          "chapter_estimated_word_count": 950,
+          "chapter_estimated_time_minutes": 36,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Convergence Of Sequences"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:b8504d65-6617-49f2-afbd-68e66552042f",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Sequence Convergence",
+              "blooms_level": "Intermediate"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 2,
+              "title": {
+                "en": "Modeling Growth And Investments"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:0f5141d8-ea0b-411a-a05e-3db785209cae",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Recursive Modeling",
+              "blooms_level": "Intermediate"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 5,
+          "title": {
+            "en": "Shortest Paths And Trees"
+          },
+          "chapter_estimated_word_count": 950,
+          "chapter_estimated_time_minutes": 36,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Dijkstra's Shortest Path"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:3baf1346-4c13-411f-8e34-5e5d5dfe85be",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Shortest Path Algorithms",
+              "blooms_level": "Intermediate"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 2,
+              "title": {
+                "en": "Kruskal's Spanning Tree"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:34793e45-c97b-4c82-b937-d342266d9461",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Minimum Spanning Tree",
+              "blooms_level": "Intermediate"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 6,
+          "title": {
+            "en": "Flow And Routing Problems"
+          },
+          "chapter_estimated_word_count": 950,
+          "chapter_estimated_time_minutes": 36,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Ford-Fulkerson Max Flow"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:e5d63761-80a6-4e45-9ce5-8d8d71b659a3",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Network Flow",
+              "blooms_level": "Intermediate"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 2,
+              "title": {
+                "en": "Traveling Salesperson Strategies"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:628e0ac5-d254-46b6-a8f6-0ccbe4ab95d7",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Traveling Salesperson Problem",
+              "blooms_level": "Intermediate"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "understand",
+          "chapter_number": 7,
+          "title": {
+            "en": "Coloring And Reliability"
+          },
+          "chapter_estimated_word_count": 1134,
+          "chapter_estimated_time_minutes": 44,
+          "children": [
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 1,
+              "title": {
+                "en": "Graph Coloring Scheduling"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:e393728b-ad7f-41ef-af69-a229af7b8ed9",
+              "estimated_word_count": 475,
+              "estimated_time_minutes": 18,
+              "primary_skill": "Graph Coloring",
+              "blooms_level": "Intermediate"
+            },
+            {
+              "label": "module",
+              "type": "understand",
+              "module_number": 2,
+              "title": {
+                "en": "Network Reliability Analysis"
+              },
+              "learning_objective_urn": "urn:pearson:learninggoal:8b7b2230-9e25-415b-9dc6-b53d3856f4f7",
+              "estimated_word_count": 659,
+              "estimated_time_minutes": 26,
+              "primary_skill": "Network Reliability",
+              "blooms_level": "Advanced"
+            }
+          ],
+          "assessment": {
+            "type": "Quick Check",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "apply",
+          "chapter_number": 8,
+          "title": {
+            "en": "Recursive Sequences & Graph Algorithms Apply"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "apply",
+              "module_number": 1,
+              "title": {
+                "en": "Apply"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ],
+          "assessment": {
+            "type": "Sample Work",
+            "scoring": "teacher",
+            "delivery": "dropbox"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "review",
+          "chapter_number": 9,
+          "title": {
+            "en": "Recursive Sequences & Graph Algorithms Review"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "review",
+              "module_number": 1,
+              "title": {
+                "en": "Review"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ],
+          "assessment": {
+            "type": "Unit Online Practice",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "test",
+          "chapter_number": 10,
+          "title": {
+            "en": "Recursive Sequences & Graph Algorithms Part Test"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [],
+          "assessment": {
+            "type": "Unit Test",
+            "scoring": "auto_and_teacher",
+            "delivery": "test"
+          }
+        }
+      ]
+    },
+    {
+      "label": "part",
+      "type": "semester",
+      "part_number": 5,
+      "title": {
+        "en": "Test_Math_25 Semester A Reflect & Review"
+      },
+      "children": [
+        {
+          "label": "chapter",
+          "type": "semester_review",
+          "chapter_number": 1,
+          "title": {
+            "en": "Semester A Review"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "semester_review",
+              "module_number": 1,
+              "title": {
+                "en": "Semester A Review & Reflect"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ],
+          "assessment": {
+            "type": "Semester Online Practice",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "semester_exam",
+          "chapter_number": 2,
+          "title": {
+            "en": "Semester A Exam"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [],
+          "assessment": {
+            "type": "Semester Exam",
+            "scoring": "auto_and_teacher",
+            "delivery": "exam"
+          }
+        }
+      ]
+    },
+    {
+      "label": "part",
+      "type": "semester",
+      "part_number": 6,
+      "title": {
+        "en": "Test_Math_25 Semester B Reflect & Review"
+      },
+      "children": [
+        {
+          "label": "chapter",
+          "type": "semester_review",
+          "chapter_number": 1,
+          "title": {
+            "en": "Semester B Review"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [
+            {
+              "label": "module",
+              "type": "semester_review",
+              "module_number": 1,
+              "title": {
+                "en": "Semester B Review & Reflect"
+              },
+              "learning_objective_urn": null,
+              "estimated_word_count": null,
+              "estimated_time_minutes": null,
+              "primary_skill": null,
+              "blooms_level": null
+            }
+          ],
+          "assessment": {
+            "type": "Semester Online Practice",
+            "scoring": "auto",
+            "delivery": "multiple_choice"
+          }
+        },
+        {
+          "label": "chapter",
+          "type": "semester_exam",
+          "chapter_number": 2,
+          "title": {
+            "en": "Semester B Exam"
+          },
+          "chapter_estimated_word_count": null,
+          "chapter_estimated_time_minutes": 60,
+          "children": [],
+          "assessment": {
+            "type": "Semester Exam",
+            "scoring": "auto_and_teacher",
+            "delivery": "exam"
+          }
+        }
+      ]
+    }
+  ],
+  "total_lesson_days": 180,
+  "total_chapters_in_course": 31,
+  "pacing_overrun": false,
+  "pacing_overrun_lesson_days": null,
+  "split_notes": [
+    "Pacing check: total_chapters_in_course=31 is below the lesson-day target range (171-189) for total_lesson_days=180. Course is under-filled.",
+    "Structure check: 3 content parts; all parts >= 4 understand chapters: True.",
+    "Merges applied: 2 (see enforcement_log)."
+  ],
+  "unassigned_objective_urns": []
+}
